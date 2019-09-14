@@ -1,281 +1,96 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::PPS_CONTROL {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register PPS_CONTROL"]
+pub type R = crate::R<u32, super::PPS_CONTROL>;
+#[doc = "Writer for register PPS_CONTROL"]
+pub type W = crate::W<u32, super::PPS_CONTROL>;
+#[doc = "Register PPS_CONTROL `reset()`'s with value 0"]
+impl crate::ResetValue for super::PPS_CONTROL {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct PPSCTRL_PPSCMDR {
-    bits: u8,
-}
-impl PPSCTRL_PPSCMDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PPSEN0R {
-    bits: bool,
-}
-impl PPSEN0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRGTMODSEL0R {
-    bits: u8,
-}
-impl TRGTMODSEL0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PPSCMD1R {
-    bits: u8,
-}
-impl PPSCMD1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRGTMODSEL1R {
-    bits: u8,
-}
-impl TRGTMODSEL1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PPSCMD2R {
-    bits: u8,
-}
-impl PPSCMD2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRGTMODSEL2R {
-    bits: u8,
-}
-impl TRGTMODSEL2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PPSCMD3R {
-    bits: u8,
-}
-impl PPSCMD3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRGTMODSEL3R {
-    bits: u8,
-}
-impl TRGTMODSEL3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PPSCTRL_PPSCMDW<'a> {
+#[doc = "Reader of field `PPSCTRL_PPSCMD`"]
+pub type PPSCTRL_PPSCMD_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `PPSCTRL_PPSCMD`"]
+pub struct PPSCTRL_PPSCMD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PPSCTRL_PPSCMDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> PPSCTRL_PPSCMD_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
+#[doc = "Reader of field `PPSEN0`"]
+pub type PPSEN0_R = crate::R<bool, bool>;
+#[doc = "Reader of field `TRGTMODSEL0`"]
+pub type TRGTMODSEL0_R = crate::R<u8, u8>;
+#[doc = "Reader of field `PPSCMD1`"]
+pub type PPSCMD1_R = crate::R<u8, u8>;
+#[doc = "Reader of field `TRGTMODSEL1`"]
+pub type TRGTMODSEL1_R = crate::R<u8, u8>;
+#[doc = "Reader of field `PPSCMD2`"]
+pub type PPSCMD2_R = crate::R<u8, u8>;
+#[doc = "Reader of field `TRGTMODSEL2`"]
+pub type TRGTMODSEL2_R = crate::R<u8, u8>;
+#[doc = "Reader of field `PPSCMD3`"]
+pub type PPSCMD3_R = crate::R<u8, u8>;
+#[doc = "Reader of field `TRGTMODSEL3`"]
+pub type TRGTMODSEL3_R = crate::R<u8, u8>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
-    #[inline]
-    pub fn ppsctrl_ppscmd(&self) -> PPSCTRL_PPSCMDR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PPSCTRL_PPSCMDR { bits }
+    #[inline(always)]
+    pub fn ppsctrl_ppscmd(&self) -> PPSCTRL_PPSCMD_R {
+        PPSCTRL_PPSCMD_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bit 4 - Flexible PPS Output Mode Enable"]
-    #[inline]
-    pub fn ppsen0(&self) -> PPSEN0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PPSEN0R { bits }
+    #[inline(always)]
+    pub fn ppsen0(&self) -> PPSEN0_R {
+        PPSEN0_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bits 5:6 - Target Time Register Mode for PPS0 Output"]
-    #[inline]
-    pub fn trgtmodsel0(&self) -> TRGTMODSEL0R {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRGTMODSEL0R { bits }
+    #[inline(always)]
+    pub fn trgtmodsel0(&self) -> TRGTMODSEL0_R {
+        TRGTMODSEL0_R::new(((self.bits >> 5) & 0x03) as u8)
     }
     #[doc = "Bits 8:10 - Flexible PPS1 Output Control"]
-    #[inline]
-    pub fn ppscmd1(&self) -> PPSCMD1R {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PPSCMD1R { bits }
+    #[inline(always)]
+    pub fn ppscmd1(&self) -> PPSCMD1_R {
+        PPSCMD1_R::new(((self.bits >> 8) & 0x07) as u8)
     }
     #[doc = "Bits 13:14 - Target Time Register Mode for PPS1 Output"]
-    #[inline]
-    pub fn trgtmodsel1(&self) -> TRGTMODSEL1R {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRGTMODSEL1R { bits }
+    #[inline(always)]
+    pub fn trgtmodsel1(&self) -> TRGTMODSEL1_R {
+        TRGTMODSEL1_R::new(((self.bits >> 13) & 0x03) as u8)
     }
     #[doc = "Bits 16:18 - Flexible PPS2 Output Control"]
-    #[inline]
-    pub fn ppscmd2(&self) -> PPSCMD2R {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PPSCMD2R { bits }
+    #[inline(always)]
+    pub fn ppscmd2(&self) -> PPSCMD2_R {
+        PPSCMD2_R::new(((self.bits >> 16) & 0x07) as u8)
     }
     #[doc = "Bits 21:22 - Target Time Register Mode for PPS2 Output"]
-    #[inline]
-    pub fn trgtmodsel2(&self) -> TRGTMODSEL2R {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 21;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRGTMODSEL2R { bits }
+    #[inline(always)]
+    pub fn trgtmodsel2(&self) -> TRGTMODSEL2_R {
+        TRGTMODSEL2_R::new(((self.bits >> 21) & 0x03) as u8)
     }
     #[doc = "Bits 24:26 - Flexible PPS3 Output Control"]
-    #[inline]
-    pub fn ppscmd3(&self) -> PPSCMD3R {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PPSCMD3R { bits }
+    #[inline(always)]
+    pub fn ppscmd3(&self) -> PPSCMD3_R {
+        PPSCMD3_R::new(((self.bits >> 24) & 0x07) as u8)
     }
     #[doc = "Bits 29:30 - Target Time Register Mode for PPS3 Output"]
-    #[inline]
-    pub fn trgtmodsel3(&self) -> TRGTMODSEL3R {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 29;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRGTMODSEL3R { bits }
+    #[inline(always)]
+    pub fn trgtmodsel3(&self) -> TRGTMODSEL3_R {
+        TRGTMODSEL3_R::new(((self.bits >> 29) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
-    #[inline]
-    pub fn ppsctrl_ppscmd(&mut self) -> _PPSCTRL_PPSCMDW {
-        _PPSCTRL_PPSCMDW { w: self }
+    #[inline(always)]
+    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W {
+        PPSCTRL_PPSCMD_W { w: self }
     }
 }
