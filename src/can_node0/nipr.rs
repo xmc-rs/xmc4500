@@ -1,542 +1,384 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::NIPR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R { bits: self.register.get() }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register NIPR"]
+pub type R = crate::R<u32, super::NIPR>;
+#[doc = "Writer for register NIPR"]
+pub type W = crate::W<u32, super::NIPR>;
+#[doc = "Register NIPR `reset()`'s with value 0"]
+impl crate::ResetValue for super::NIPR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Possible values of the field `ALINP`"]
+#[doc = "Alert Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
-pub enum ALINPR {
-    #[doc = "Interrupt output line INT_O0 is selected."]
+pub enum ALINP_A {
+    #[doc = "0: Interrupt output line INT_O0 is selected."]
     VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
+    #[doc = "1: Interrupt output line INT_O1 is selected."]
     VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
+    #[doc = "7: Interrupt output line INT_O7 is selected."]
     VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
 }
-impl ALINPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            ALINPR::VALUE1 => 0,
-            ALINPR::VALUE2 => 1,
-            ALINPR::VALUE3 => 7,
-            ALINPR::_Reserved(bits) => bits,
+impl From<ALINP_A> for u8 {
+    #[inline(always)]
+    fn from(variant: ALINP_A) -> Self {
+        match variant {
+            ALINP_A::VALUE1 => 0,
+            ALINP_A::VALUE2 => 1,
+            ALINP_A::VALUE3 => 7,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> ALINPR {
-        match value {
-            0 => ALINPR::VALUE1,
-            1 => ALINPR::VALUE2,
-            7 => ALINPR::VALUE3,
-            i => ALINPR::_Reserved(i),
+}
+#[doc = "Reader of field `ALINP`"]
+pub type ALINP_R = crate::R<u8, ALINP_A>;
+impl ALINP_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, ALINP_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(ALINP_A::VALUE1),
+            1 => Val(ALINP_A::VALUE2),
+            7 => Val(ALINP_A::VALUE3),
+            i => Res(i),
         }
     }
     #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ALINPR::VALUE1
+        *self == ALINP_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ALINPR::VALUE2
+        *self == ALINP_A::VALUE2
     }
     #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == ALINPR::VALUE3
+        *self == ALINP_A::VALUE3
     }
 }
-#[doc = "Possible values of the field `LECINP`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum LECINPR {
-    #[doc = "Interrupt output line INT_O0 is selected."]
-    VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
-    VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl LECINPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            LECINPR::VALUE1 => 0,
-            LECINPR::VALUE2 => 1,
-            LECINPR::VALUE3 => 7,
-            LECINPR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> LECINPR {
-        match value {
-            0 => LECINPR::VALUE1,
-            1 => LECINPR::VALUE2,
-            7 => LECINPR::VALUE3,
-            i => LECINPR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == LECINPR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == LECINPR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == LECINPR::VALUE3
-    }
-}
-#[doc = "Possible values of the field `TRINP`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum TRINPR {
-    #[doc = "Interrupt output line INT_O0 is selected."]
-    VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
-    VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl TRINPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            TRINPR::VALUE1 => 0,
-            TRINPR::VALUE2 => 1,
-            TRINPR::VALUE3 => 7,
-            TRINPR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> TRINPR {
-        match value {
-            0 => TRINPR::VALUE1,
-            1 => TRINPR::VALUE2,
-            7 => TRINPR::VALUE3,
-            i => TRINPR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == TRINPR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == TRINPR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == TRINPR::VALUE3
-    }
-}
-#[doc = "Possible values of the field `CFCINP`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CFCINPR {
-    #[doc = "Interrupt output line INT_O0 is selected."]
-    VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
-    VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
-    VALUE3,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
-}
-impl CFCINPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        match *self {
-            CFCINPR::VALUE1 => 0,
-            CFCINPR::VALUE2 => 1,
-            CFCINPR::VALUE3 => 7,
-            CFCINPR::_Reserved(bits) => bits,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: u8) -> CFCINPR {
-        match value {
-            0 => CFCINPR::VALUE1,
-            1 => CFCINPR::VALUE2,
-            7 => CFCINPR::VALUE3,
-            i => CFCINPR::_Reserved(i),
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline]
-    pub fn is_value1(&self) -> bool {
-        *self == CFCINPR::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline]
-    pub fn is_value2(&self) -> bool {
-        *self == CFCINPR::VALUE2
-    }
-    #[doc = "Checks if the value of the field is `VALUE3`"]
-    #[inline]
-    pub fn is_value3(&self) -> bool {
-        *self == CFCINPR::VALUE3
-    }
-}
-#[doc = "Values that can be written to the field `ALINP`"]
-pub enum ALINPW {
-    #[doc = "Interrupt output line INT_O0 is selected."]
-    VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
-    VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
-    VALUE3,
-}
-impl ALINPW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            ALINPW::VALUE1 => 0,
-            ALINPW::VALUE2 => 1,
-            ALINPW::VALUE3 => 7,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ALINPW<'a> {
+#[doc = "Write proxy for field `ALINP`"]
+pub struct ALINP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ALINPW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: ALINPW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> ALINP_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: ALINP_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(ALINPW::VALUE1)
+        self.variant(ALINP_A::VALUE1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(ALINPW::VALUE2)
+        self.variant(ALINP_A::VALUE2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(ALINPW::VALUE3)
+        self.variant(ALINP_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `LECINP`"]
-pub enum LECINPW {
-    #[doc = "Interrupt output line INT_O0 is selected."]
+#[doc = "Last Error Code Interrupt Node Pointer\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum LECINP_A {
+    #[doc = "0: Interrupt output line INT_O0 is selected."]
     VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
+    #[doc = "1: Interrupt output line INT_O1 is selected."]
     VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
+    #[doc = "7: Interrupt output line INT_O7 is selected."]
     VALUE3,
 }
-impl LECINPW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            LECINPW::VALUE1 => 0,
-            LECINPW::VALUE2 => 1,
-            LECINPW::VALUE3 => 7,
+impl From<LECINP_A> for u8 {
+    #[inline(always)]
+    fn from(variant: LECINP_A) -> Self {
+        match variant {
+            LECINP_A::VALUE1 => 0,
+            LECINP_A::VALUE2 => 1,
+            LECINP_A::VALUE3 => 7,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _LECINPW<'a> {
+#[doc = "Reader of field `LECINP`"]
+pub type LECINP_R = crate::R<u8, LECINP_A>;
+impl LECINP_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, LECINP_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(LECINP_A::VALUE1),
+            1 => Val(LECINP_A::VALUE2),
+            7 => Val(LECINP_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == LECINP_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == LECINP_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == LECINP_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `LECINP`"]
+pub struct LECINP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _LECINPW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: LECINPW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> LECINP_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: LECINP_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(LECINPW::VALUE1)
+        self.variant(LECINP_A::VALUE1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(LECINPW::VALUE2)
+        self.variant(LECINP_A::VALUE2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(LECINPW::VALUE3)
+        self.variant(LECINP_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 4)) | (((value as u32) & 0x07) << 4);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `TRINP`"]
-pub enum TRINPW {
-    #[doc = "Interrupt output line INT_O0 is selected."]
+#[doc = "Transfer OK Interrupt Node Pointer\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TRINP_A {
+    #[doc = "0: Interrupt output line INT_O0 is selected."]
     VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
+    #[doc = "1: Interrupt output line INT_O1 is selected."]
     VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
+    #[doc = "7: Interrupt output line INT_O7 is selected."]
     VALUE3,
 }
-impl TRINPW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            TRINPW::VALUE1 => 0,
-            TRINPW::VALUE2 => 1,
-            TRINPW::VALUE3 => 7,
+impl From<TRINP_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TRINP_A) -> Self {
+        match variant {
+            TRINP_A::VALUE1 => 0,
+            TRINP_A::VALUE2 => 1,
+            TRINP_A::VALUE3 => 7,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _TRINPW<'a> {
+#[doc = "Reader of field `TRINP`"]
+pub type TRINP_R = crate::R<u8, TRINP_A>;
+impl TRINP_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, TRINP_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(TRINP_A::VALUE1),
+            1 => Val(TRINP_A::VALUE2),
+            7 => Val(TRINP_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == TRINP_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == TRINP_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == TRINP_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `TRINP`"]
+pub struct TRINP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRINPW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TRINPW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> TRINP_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TRINP_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(TRINPW::VALUE1)
+        self.variant(TRINP_A::VALUE1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(TRINPW::VALUE2)
+        self.variant(TRINP_A::VALUE2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(TRINPW::VALUE3)
+        self.variant(TRINP_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 8)) | (((value as u32) & 0x07) << 8);
         self.w
     }
 }
-#[doc = "Values that can be written to the field `CFCINP`"]
-pub enum CFCINPW {
-    #[doc = "Interrupt output line INT_O0 is selected."]
+#[doc = "Frame Counter Interrupt Node Pointer\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum CFCINP_A {
+    #[doc = "0: Interrupt output line INT_O0 is selected."]
     VALUE1,
-    #[doc = "Interrupt output line INT_O1 is selected."]
+    #[doc = "1: Interrupt output line INT_O1 is selected."]
     VALUE2,
-    #[doc = "Interrupt output line INT_O7 is selected."]
+    #[doc = "7: Interrupt output line INT_O7 is selected."]
     VALUE3,
 }
-impl CFCINPW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> u8 {
-        match *self {
-            CFCINPW::VALUE1 => 0,
-            CFCINPW::VALUE2 => 1,
-            CFCINPW::VALUE3 => 7,
+impl From<CFCINP_A> for u8 {
+    #[inline(always)]
+    fn from(variant: CFCINP_A) -> Self {
+        match variant {
+            CFCINP_A::VALUE1 => 0,
+            CFCINP_A::VALUE2 => 1,
+            CFCINP_A::VALUE3 => 7,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFCINPW<'a> {
+#[doc = "Reader of field `CFCINP`"]
+pub type CFCINP_R = crate::R<u8, CFCINP_A>;
+impl CFCINP_R {
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> crate::Variant<u8, CFCINP_A> {
+        use crate::Variant::*;
+        match self.bits {
+            0 => Val(CFCINP_A::VALUE1),
+            1 => Val(CFCINP_A::VALUE2),
+            7 => Val(CFCINP_A::VALUE3),
+            i => Res(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == CFCINP_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == CFCINP_A::VALUE2
+    }
+    #[doc = "Checks if the value of the field is `VALUE3`"]
+    #[inline(always)]
+    pub fn is_value3(&self) -> bool {
+        *self == CFCINP_A::VALUE3
+    }
+}
+#[doc = "Write proxy for field `CFCINP`"]
+pub struct CFCINP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFCINPW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: CFCINPW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+impl<'a> CFCINP_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CFCINP_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value1(self) -> &'a mut W {
-        self.variant(CFCINPW::VALUE1)
+        self.variant(CFCINP_A::VALUE1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value2(self) -> &'a mut W {
-        self.variant(CFCINPW::VALUE2)
+        self.variant(CFCINP_A::VALUE2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
-    #[inline]
+    #[inline(always)]
     pub fn value3(self) -> &'a mut W {
-        self.variant(CFCINPW::VALUE3)
+        self.variant(CFCINP_A::VALUE3)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 12)) | (((value as u32) & 0x07) << 12);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:2 - Alert Interrupt Node Pointer"]
-    #[inline]
-    pub fn alinp(&self) -> ALINPR {
-        ALINPR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn alinp(&self) -> ALINP_R {
+        ALINP_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bits 4:6 - Last Error Code Interrupt Node Pointer"]
-    #[inline]
-    pub fn lecinp(&self) -> LECINPR {
-        LECINPR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn lecinp(&self) -> LECINP_R {
+        LECINP_R::new(((self.bits >> 4) & 0x07) as u8)
     }
     #[doc = "Bits 8:10 - Transfer OK Interrupt Node Pointer"]
-    #[inline]
-    pub fn trinp(&self) -> TRINPR {
-        TRINPR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn trinp(&self) -> TRINP_R {
+        TRINP_R::new(((self.bits >> 8) & 0x07) as u8)
     }
     #[doc = "Bits 12:14 - Frame Counter Interrupt Node Pointer"]
-    #[inline]
-    pub fn cfcinp(&self) -> CFCINPR {
-        CFCINPR::_from({
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        })
+    #[inline(always)]
+    pub fn cfcinp(&self) -> CFCINP_R {
+        CFCINP_R::new(((self.bits >> 12) & 0x07) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:2 - Alert Interrupt Node Pointer"]
-    #[inline]
-    pub fn alinp(&mut self) -> _ALINPW {
-        _ALINPW { w: self }
+    #[inline(always)]
+    pub fn alinp(&mut self) -> ALINP_W {
+        ALINP_W { w: self }
     }
     #[doc = "Bits 4:6 - Last Error Code Interrupt Node Pointer"]
-    #[inline]
-    pub fn lecinp(&mut self) -> _LECINPW {
-        _LECINPW { w: self }
+    #[inline(always)]
+    pub fn lecinp(&mut self) -> LECINP_W {
+        LECINP_W { w: self }
     }
     #[doc = "Bits 8:10 - Transfer OK Interrupt Node Pointer"]
-    #[inline]
-    pub fn trinp(&mut self) -> _TRINPW {
-        _TRINPW { w: self }
+    #[inline(always)]
+    pub fn trinp(&mut self) -> TRINP_W {
+        TRINP_W { w: self }
     }
     #[doc = "Bits 12:14 - Frame Counter Interrupt Node Pointer"]
-    #[inline]
-    pub fn cfcinp(&mut self) -> _CFCINPW {
-        _CFCINPW { w: self }
+    #[inline(always)]
+    pub fn cfcinp(&mut self) -> CFCINP_W {
+        CFCINP_W { w: self }
     }
 }
