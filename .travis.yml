@@ -35,9 +35,9 @@ install:
   - cargo install-update -a
 script:
   - cargo check --target $TARGET
-  - cargo build --verbose --target $TARGET --all && cargo coverage --verbose && bash <(curl -s https://codecov.io/bash) -s target/kcov
-  - cargo coverage --verbose
-  - cargo test --target $TARGET --release --verbose --all
+  - cargo build --verbose --target $TARGET --all # && cargo coverage --verbose && bash <(curl -s https://codecov.io/bash) -s target/kcov
+  # - cargo coverage --verbose
+  # - cargo test --target $TARGET --release --verbose --all
   - cargo doc --verbose --no-deps --document-private-items
   # - cargo doc-upload
 after_script: set +e
