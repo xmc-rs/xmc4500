@@ -14,17 +14,14 @@ impl crate::ResetValue for super::EVFLAG {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESEV0_A {
     #[doc = "0: No result event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A new result has been stored in register RESMx"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RESEV0_A> for bool {
     #[inline(always)]
     fn from(variant: RESEV0_A) -> Self {
-        match variant {
-            RESEV0_A::VALUE1 => false,
-            RESEV0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RESEV0`"]
@@ -92,17 +89,14 @@ impl<'a> RESEV0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESEV1_A {
     #[doc = "0: No result event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A new result has been stored in register RESMx"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RESEV1_A> for bool {
     #[inline(always)]
     fn from(variant: RESEV1_A) -> Self {
-        match variant {
-            RESEV1_A::VALUE1 => false,
-            RESEV1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RESEV1`"]
@@ -170,17 +164,14 @@ impl<'a> RESEV1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESEV2_A {
     #[doc = "0: No result event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A new result has been stored in register RESMx"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RESEV2_A> for bool {
     #[inline(always)]
     fn from(variant: RESEV2_A) -> Self {
-        match variant {
-            RESEV2_A::VALUE1 => false,
-            RESEV2_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RESEV2`"]
@@ -248,17 +239,14 @@ impl<'a> RESEV2_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESEV3_A {
     #[doc = "0: No result event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: A new result has been stored in register RESMx"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RESEV3_A> for bool {
     #[inline(always)]
     fn from(variant: RESEV3_A) -> Self {
-        match variant {
-            RESEV3_A::VALUE1 => false,
-            RESEV3_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RESEV3`"]
@@ -326,17 +314,14 @@ impl<'a> RESEV3_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV0_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV0_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV0_A) -> Self {
-        match variant {
-            ALEV0_A::VALUE1 => false,
-            ALEV0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV0`"]
@@ -404,17 +389,14 @@ impl<'a> ALEV0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV1_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV1_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV1_A) -> Self {
-        match variant {
-            ALEV1_A::VALUE1 => false,
-            ALEV1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV1`"]
@@ -482,17 +464,14 @@ impl<'a> ALEV1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV2_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV2_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV2_A) -> Self {
-        match variant {
-            ALEV2_A::VALUE1 => false,
-            ALEV2_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV2`"]
@@ -560,17 +539,14 @@ impl<'a> ALEV2_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV3_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV3_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV3_A) -> Self {
-        match variant {
-            ALEV3_A::VALUE1 => false,
-            ALEV3_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV3`"]
@@ -638,17 +614,14 @@ impl<'a> ALEV3_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV4_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV4_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV4_A) -> Self {
-        match variant {
-            ALEV4_A::VALUE1 => false,
-            ALEV4_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV4`"]
@@ -716,17 +689,14 @@ impl<'a> ALEV4_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV5_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV5_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV5_A) -> Self {
-        match variant {
-            ALEV5_A::VALUE1 => false,
-            ALEV5_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV5`"]
@@ -794,17 +764,14 @@ impl<'a> ALEV5_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV6_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV6_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV6_A) -> Self {
-        match variant {
-            ALEV6_A::VALUE1 => false,
-            ALEV6_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV6`"]
@@ -872,17 +839,14 @@ impl<'a> ALEV6_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV7_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV7_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV7_A) -> Self {
-        match variant {
-            ALEV7_A::VALUE1 => false,
-            ALEV7_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV7`"]
@@ -950,17 +914,14 @@ impl<'a> ALEV7_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV8_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV8_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV8_A) -> Self {
-        match variant {
-            ALEV8_A::VALUE1 => false,
-            ALEV8_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV8`"]
@@ -1028,17 +989,14 @@ impl<'a> ALEV8_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALEV9_A {
     #[doc = "0: No alarm event"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An alarm event has occurred"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<ALEV9_A> for bool {
     #[inline(always)]
     fn from(variant: ALEV9_A) -> Self {
-        match variant {
-            ALEV9_A::VALUE1 => false,
-            ALEV9_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `ALEV9`"]

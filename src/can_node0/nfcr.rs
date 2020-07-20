@@ -26,16 +26,15 @@ impl<'a> CFC_W<'a> {
 }
 #[doc = "CAN Frame Count Selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CFSEL_A {
     #[doc = "0: The frame counter is incremented (internally) at the beginning of a new bit time. The value is sampled during the SOF bit of a new frame. The sampled value is visible in the CFC field."]
-    VALUE1,
+    VALUE1 = 0,
 }
 impl From<CFSEL_A> for u8 {
     #[inline(always)]
     fn from(variant: CFSEL_A) -> Self {
-        match variant {
-            CFSEL_A::VALUE1 => 0,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CFSEL`"]
@@ -80,22 +79,19 @@ impl<'a> CFSEL_W<'a> {
 }
 #[doc = "CAN Frame Counter Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum CFMOD_A {
     #[doc = "0: Frame Count Mode: The frame counter is incremented upon the reception and transmission of frames."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Time Stamp Mode: The frame counter is used to count bit times."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "2: Bit Timing Mode: The frame counter is used for analysis of the bit timing."]
-    VALUE3,
+    VALUE3 = 2,
 }
 impl From<CFMOD_A> for u8 {
     #[inline(always)]
     fn from(variant: CFMOD_A) -> Self {
-        match variant {
-            CFMOD_A::VALUE1 => 0,
-            CFMOD_A::VALUE2 => 1,
-            CFMOD_A::VALUE3 => 2,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `CFMOD`"]
@@ -164,17 +160,14 @@ impl<'a> CFMOD_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CFCIE_A {
     #[doc = "0: CAN frame counter overflow interrupt is disabled."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: CAN frame counter overflow interrupt is enabled."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CFCIE_A> for bool {
     #[inline(always)]
     fn from(variant: CFCIE_A) -> Self {
-        match variant {
-            CFCIE_A::VALUE1 => false,
-            CFCIE_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CFCIE`"]
@@ -242,17 +235,14 @@ impl<'a> CFCIE_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CFCOV_A {
     #[doc = "0: No overflow has occurred since last flag reset."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: An overflow has occurred since last flag reset."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<CFCOV_A> for bool {
     #[inline(always)]
     fn from(variant: CFCOV_A) -> Self {
-        match variant {
-            CFCOV_A::VALUE1 => false,
-            CFCOV_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CFCOV`"]

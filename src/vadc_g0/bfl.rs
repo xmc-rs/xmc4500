@@ -14,17 +14,14 @@ impl crate::ResetValue for super::BFL {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFL0_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active state: result has crossed the activation boundary"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFL0_A> for bool {
     #[inline(always)]
     fn from(variant: BFL0_A) -> Self {
-        match variant {
-            BFL0_A::VALUE1 => false,
-            BFL0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFL0`"]
@@ -53,17 +50,14 @@ impl BFL0_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFL1_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active state: result has crossed the activation boundary"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFL1_A> for bool {
     #[inline(always)]
     fn from(variant: BFL1_A) -> Self {
-        match variant {
-            BFL1_A::VALUE1 => false,
-            BFL1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFL1`"]
@@ -92,17 +86,14 @@ impl BFL1_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFL2_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active state: result has crossed the activation boundary"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFL2_A> for bool {
     #[inline(always)]
     fn from(variant: BFL2_A) -> Self {
-        match variant {
-            BFL2_A::VALUE1 => false,
-            BFL2_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFL2`"]
@@ -131,17 +122,14 @@ impl BFL2_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFL3_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Active state: result has crossed the activation boundary"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFL3_A> for bool {
     #[inline(always)]
     fn from(variant: BFL3_A) -> Self {
-        match variant {
-            BFL3_A::VALUE1 => false,
-            BFL3_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFL3`"]
@@ -170,17 +158,14 @@ impl BFL3_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFE0_A {
     #[doc = "0: Output 0 on this channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output BFLy on this channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFE0_A> for bool {
     #[inline(always)]
     fn from(variant: BFE0_A) -> Self {
-        match variant {
-            BFE0_A::VALUE1 => false,
-            BFE0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFE0`"]
@@ -248,17 +233,14 @@ impl<'a> BFE0_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFE1_A {
     #[doc = "0: Output 0 on this channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output BFLy on this channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFE1_A> for bool {
     #[inline(always)]
     fn from(variant: BFE1_A) -> Self {
-        match variant {
-            BFE1_A::VALUE1 => false,
-            BFE1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFE1`"]
@@ -326,17 +308,14 @@ impl<'a> BFE1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFE2_A {
     #[doc = "0: Output 0 on this channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output BFLy on this channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFE2_A> for bool {
     #[inline(always)]
     fn from(variant: BFE2_A) -> Self {
-        match variant {
-            BFE2_A::VALUE1 => false,
-            BFE2_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFE2`"]
@@ -404,17 +383,14 @@ impl<'a> BFE2_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BFE3_A {
     #[doc = "0: Output 0 on this channel"]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Output BFLy on this channel"]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<BFE3_A> for bool {
     #[inline(always)]
     fn from(variant: BFE3_A) -> Self {
-        match variant {
-            BFE3_A::VALUE1 => false,
-            BFE3_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BFE3`"]

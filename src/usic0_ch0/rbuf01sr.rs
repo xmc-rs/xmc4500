@@ -6,17 +6,14 @@ pub type WLEN0_R = crate::R<u8, u8>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SOF0_A {
     #[doc = "0: The data in RBUF0 has not been the first data word of a data frame."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The data in RBUF0 has been the first data word of a data frame."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SOF0_A> for bool {
     #[inline(always)]
     fn from(variant: SOF0_A) -> Self {
-        match variant {
-            SOF0_A::VALUE1 => false,
-            SOF0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SOF0`"]
@@ -47,17 +44,14 @@ pub type PAR0_R = crate::R<bool, bool>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PERR0_A {
     #[doc = "0: The received protocol-related argument PAR matches the expected value. The reception of the data word sets bit PSR.RIF and can generate a receive interrupt."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The received protocol-related argument PAR does not match the expected value. The reception of the data word sets bit PSR.AIF and can generate an alternative receive interrupt."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PERR0_A> for bool {
     #[inline(always)]
     fn from(variant: PERR0_A) -> Self {
-        match variant {
-            PERR0_A::VALUE1 => false,
-            PERR0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PERR0`"]
@@ -86,17 +80,14 @@ impl PERR0_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDV00_A {
     #[doc = "0: Register RBUF0 does not contain data that has not yet been read out."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Register RBUF0 contains data that has not yet been read out."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RDV00_A> for bool {
     #[inline(always)]
     fn from(variant: RDV00_A) -> Self {
-        match variant {
-            RDV00_A::VALUE1 => false,
-            RDV00_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RDV00`"]
@@ -125,17 +116,14 @@ impl RDV00_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDV01_A {
     #[doc = "0: Register RBUF1 does not contain data that has not yet been read out."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Register RBUF1 contains data that has not yet been read out."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RDV01_A> for bool {
     #[inline(always)]
     fn from(variant: RDV01_A) -> Self {
-        match variant {
-            RDV01_A::VALUE1 => false,
-            RDV01_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RDV01`"]
@@ -164,17 +152,14 @@ impl RDV01_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DS0_A {
     #[doc = "0: The register RBUF contains the data of RBUF0 (same for associated status information)."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The register RBUF contains the data of RBUF1 (same for associated status information)."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DS0_A> for bool {
     #[inline(always)]
     fn from(variant: DS0_A) -> Self {
-        match variant {
-            DS0_A::VALUE1 => false,
-            DS0_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DS0`"]
@@ -205,17 +190,14 @@ pub type WLEN1_R = crate::R<u8, u8>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SOF1_A {
     #[doc = "0: The data in RBUF1 has not been the first data word of a data frame."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The data in RBUF1 has been the first data word of a data frame."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<SOF1_A> for bool {
     #[inline(always)]
     fn from(variant: SOF1_A) -> Self {
-        match variant {
-            SOF1_A::VALUE1 => false,
-            SOF1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SOF1`"]
@@ -246,17 +228,14 @@ pub type PAR1_R = crate::R<bool, bool>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PERR1_A {
     #[doc = "0: The received protocol-related argument PAR matches the expected value. The reception of the data word sets bit PSR.RIF and can generate a receive interrupt."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The received protocol-related argument PAR does not match the expected value. The reception of the data word sets bit PSR.AIF and can generate an alternative receive interrupt."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<PERR1_A> for bool {
     #[inline(always)]
     fn from(variant: PERR1_A) -> Self {
-        match variant {
-            PERR1_A::VALUE1 => false,
-            PERR1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PERR1`"]
@@ -285,17 +264,14 @@ impl PERR1_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDV10_A {
     #[doc = "0: Register RBUF0 does not contain data that has not yet been read out."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Register RBUF0 contains data that has not yet been read out."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RDV10_A> for bool {
     #[inline(always)]
     fn from(variant: RDV10_A) -> Self {
-        match variant {
-            RDV10_A::VALUE1 => false,
-            RDV10_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RDV10`"]
@@ -324,17 +300,14 @@ impl RDV10_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDV11_A {
     #[doc = "0: Register RBUF1 does not contain data that has not yet been read out."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Register RBUF1 contains data that has not yet been read out."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<RDV11_A> for bool {
     #[inline(always)]
     fn from(variant: RDV11_A) -> Self {
-        match variant {
-            RDV11_A::VALUE1 => false,
-            RDV11_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RDV11`"]
@@ -363,17 +336,14 @@ impl RDV11_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DS1_A {
     #[doc = "0: The register RBUF contains the data of RBUF0 (same for associated status information)."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: The register RBUF contains the data of RBUF1 (same for associated status information)."]
-    VALUE2,
+    VALUE2 = 1,
 }
 impl From<DS1_A> for bool {
     #[inline(always)]
     fn from(variant: DS1_A) -> Self {
-        match variant {
-            DS1_A::VALUE1 => false,
-            DS1_A::VALUE2 => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DS1`"]
