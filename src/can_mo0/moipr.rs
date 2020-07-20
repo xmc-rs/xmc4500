@@ -12,22 +12,19 @@ impl crate::ResetValue for super::MOIPR {
 }
 #[doc = "Receive Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum RXINP_A {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3,
+    VALUE3 = 7,
 }
 impl From<RXINP_A> for u8 {
     #[inline(always)]
     fn from(variant: RXINP_A) -> Self {
-        match variant {
-            RXINP_A::VALUE1 => 0,
-            RXINP_A::VALUE2 => 1,
-            RXINP_A::VALUE3 => 7,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `RXINP`"]
@@ -94,22 +91,19 @@ impl<'a> RXINP_W<'a> {
 }
 #[doc = "Transmit Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum TXINP_A {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1,
+    VALUE1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2,
+    VALUE2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3,
+    VALUE3 = 7,
 }
 impl From<TXINP_A> for u8 {
     #[inline(always)]
     fn from(variant: TXINP_A) -> Self {
-        match variant {
-            TXINP_A::VALUE1 => 0,
-            TXINP_A::VALUE2 => 1,
-            TXINP_A::VALUE3 => 7,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `TXINP`"]
