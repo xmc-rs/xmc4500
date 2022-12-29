@@ -1,0 +1,29 @@
+
+
+on:
+  workflow_dispatch:
+
+name: Update
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: svd2rust
+      - uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: form
+      - uses: oleksiyrudenko/gha-git-credentials@v2
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+      - run: ./svd.sh
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          branch: svd-update
+          commit-message: "feat: updating from newer svd2rust"
+          title: "feat: updating from newer svd2rust"
