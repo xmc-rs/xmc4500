@@ -40,4 +40,5 @@ jobs:
           branch: svd-update
           commit-message: "feat: updating from newer svd2rust"
           title: "feat: updating from newer svd2rust"
+          labels: automerge
           token: ${{ steps.generate-token.outputs.token }}
