@@ -21,7 +21,13 @@ jobs:
       - uses: oleksiyrudenko/gha-git-credentials@v2
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
-      - run: ./svd.sh
+      - run: |
+          rm -r src/
+          svd2rust -i XMC4500.svd
+          mkdir src
+          form -i lib.rs -o src/
+          cargo fmt
+          rm lib.rs
       - uses: peter-evans/create-pull-request@v4
         with:
           branch: svd-update
