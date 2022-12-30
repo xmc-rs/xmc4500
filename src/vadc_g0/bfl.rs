@@ -34,8 +34,10 @@ impl From<crate::W<BFL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `BFL0` reader - Boundar0 Flag y"]
+pub type BFL0_R = crate::BitReader<BFL0_A>;
 #[doc = "Boundar0 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFL0_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
     VALUE1 = 0,
@@ -48,13 +50,8 @@ impl From<BFL0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFL0` reader - Boundar0 Flag y"]
-pub struct BFL0_R(crate::FieldReader<bool, BFL0_A>);
 impl BFL0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFL0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFL0_A {
         match self.bits {
@@ -65,23 +62,18 @@ impl BFL0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFL0_A::VALUE1
+        *self == BFL0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFL0_A::VALUE2
+        *self == BFL0_A::VALUE2
     }
 }
-impl core::ops::Deref for BFL0_R {
-    type Target = crate::FieldReader<bool, BFL0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `BFL1` reader - Boundar1 Flag y"]
+pub type BFL1_R = crate::BitReader<BFL1_A>;
 #[doc = "Boundar1 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFL1_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
     VALUE1 = 0,
@@ -94,13 +86,8 @@ impl From<BFL1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFL1` reader - Boundar1 Flag y"]
-pub struct BFL1_R(crate::FieldReader<bool, BFL1_A>);
 impl BFL1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFL1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFL1_A {
         match self.bits {
@@ -111,23 +98,18 @@ impl BFL1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFL1_A::VALUE1
+        *self == BFL1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFL1_A::VALUE2
+        *self == BFL1_A::VALUE2
     }
 }
-impl core::ops::Deref for BFL1_R {
-    type Target = crate::FieldReader<bool, BFL1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `BFL2` reader - Boundar2 Flag y"]
+pub type BFL2_R = crate::BitReader<BFL2_A>;
 #[doc = "Boundar2 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFL2_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
     VALUE1 = 0,
@@ -140,13 +122,8 @@ impl From<BFL2_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFL2` reader - Boundar2 Flag y"]
-pub struct BFL2_R(crate::FieldReader<bool, BFL2_A>);
 impl BFL2_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFL2_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFL2_A {
         match self.bits {
@@ -157,23 +134,18 @@ impl BFL2_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFL2_A::VALUE1
+        *self == BFL2_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFL2_A::VALUE2
+        *self == BFL2_A::VALUE2
     }
 }
-impl core::ops::Deref for BFL2_R {
-    type Target = crate::FieldReader<bool, BFL2_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `BFL3` reader - Boundar3 Flag y"]
+pub type BFL3_R = crate::BitReader<BFL3_A>;
 #[doc = "Boundar3 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFL3_A {
     #[doc = "0: Passive state: result has not yet crossed the activation boundary, or selected gate signal is inactive, or this boundary flag is disabled"]
     VALUE1 = 0,
@@ -186,13 +158,8 @@ impl From<BFL3_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFL3` reader - Boundar3 Flag y"]
-pub struct BFL3_R(crate::FieldReader<bool, BFL3_A>);
 impl BFL3_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFL3_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFL3_A {
         match self.bits {
@@ -203,23 +170,18 @@ impl BFL3_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFL3_A::VALUE1
+        *self == BFL3_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFL3_A::VALUE2
+        *self == BFL3_A::VALUE2
     }
 }
-impl core::ops::Deref for BFL3_R {
-    type Target = crate::FieldReader<bool, BFL3_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `BFE0` reader - Enable Bit for Boundar0 Flag y"]
+pub type BFE0_R = crate::BitReader<BFE0_A>;
 #[doc = "Enable Bit for Boundar0 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFE0_A {
     #[doc = "0: Output 0 on this channel"]
     VALUE1 = 0,
@@ -232,13 +194,8 @@ impl From<BFE0_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFE0` reader - Enable Bit for Boundar0 Flag y"]
-pub struct BFE0_R(crate::FieldReader<bool, BFE0_A>);
 impl BFE0_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFE0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFE0_A {
         match self.bits {
@@ -249,31 +206,17 @@ impl BFE0_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFE0_A::VALUE1
+        *self == BFE0_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFE0_A::VALUE2
-    }
-}
-impl core::ops::Deref for BFE0_R {
-    type Target = crate::FieldReader<bool, BFE0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BFE0_A::VALUE2
     }
 }
 #[doc = "Field `BFE0` writer - Enable Bit for Boundar0 Flag y"]
-pub struct BFE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFE0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BFE0_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BFE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE0_A, O>;
+impl<'a, const O: u8> BFE0_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -284,25 +227,11 @@ impl<'a> BFE0_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(BFE0_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
 }
+#[doc = "Field `BFE1` reader - Enable Bit for Boundar1 Flag y"]
+pub type BFE1_R = crate::BitReader<BFE1_A>;
 #[doc = "Enable Bit for Boundar1 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFE1_A {
     #[doc = "0: Output 0 on this channel"]
     VALUE1 = 0,
@@ -315,13 +244,8 @@ impl From<BFE1_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFE1` reader - Enable Bit for Boundar1 Flag y"]
-pub struct BFE1_R(crate::FieldReader<bool, BFE1_A>);
 impl BFE1_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFE1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFE1_A {
         match self.bits {
@@ -332,31 +256,17 @@ impl BFE1_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFE1_A::VALUE1
+        *self == BFE1_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFE1_A::VALUE2
-    }
-}
-impl core::ops::Deref for BFE1_R {
-    type Target = crate::FieldReader<bool, BFE1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BFE1_A::VALUE2
     }
 }
 #[doc = "Field `BFE1` writer - Enable Bit for Boundar1 Flag y"]
-pub struct BFE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFE1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BFE1_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BFE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE1_A, O>;
+impl<'a, const O: u8> BFE1_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -367,25 +277,11 @@ impl<'a> BFE1_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(BFE1_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
 }
+#[doc = "Field `BFE2` reader - Enable Bit for Boundar2 Flag y"]
+pub type BFE2_R = crate::BitReader<BFE2_A>;
 #[doc = "Enable Bit for Boundar2 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFE2_A {
     #[doc = "0: Output 0 on this channel"]
     VALUE1 = 0,
@@ -398,13 +294,8 @@ impl From<BFE2_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFE2` reader - Enable Bit for Boundar2 Flag y"]
-pub struct BFE2_R(crate::FieldReader<bool, BFE2_A>);
 impl BFE2_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFE2_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFE2_A {
         match self.bits {
@@ -415,31 +306,17 @@ impl BFE2_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFE2_A::VALUE1
+        *self == BFE2_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFE2_A::VALUE2
-    }
-}
-impl core::ops::Deref for BFE2_R {
-    type Target = crate::FieldReader<bool, BFE2_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BFE2_A::VALUE2
     }
 }
 #[doc = "Field `BFE2` writer - Enable Bit for Boundar2 Flag y"]
-pub struct BFE2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFE2_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BFE2_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BFE2_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE2_A, O>;
+impl<'a, const O: u8> BFE2_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -450,25 +327,11 @@ impl<'a> BFE2_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(BFE2_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
-        self.w
-    }
 }
+#[doc = "Field `BFE3` reader - Enable Bit for Boundar3 Flag y"]
+pub type BFE3_R = crate::BitReader<BFE3_A>;
 #[doc = "Enable Bit for Boundar3 Flag y\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BFE3_A {
     #[doc = "0: Output 0 on this channel"]
     VALUE1 = 0,
@@ -481,13 +344,8 @@ impl From<BFE3_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BFE3` reader - Enable Bit for Boundar3 Flag y"]
-pub struct BFE3_R(crate::FieldReader<bool, BFE3_A>);
 impl BFE3_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        BFE3_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BFE3_A {
         match self.bits {
@@ -498,31 +356,17 @@ impl BFE3_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == BFE3_A::VALUE1
+        *self == BFE3_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == BFE3_A::VALUE2
-    }
-}
-impl core::ops::Deref for BFE3_R {
-    type Target = crate::FieldReader<bool, BFE3_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BFE3_A::VALUE2
     }
 }
 #[doc = "Field `BFE3` writer - Enable Bit for Boundar3 Flag y"]
-pub struct BFE3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFE3_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BFE3_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BFE3_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE3_A, O>;
+impl<'a, const O: u8> BFE3_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -533,85 +377,73 @@ impl<'a> BFE3_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(BFE3_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - Boundar0 Flag y"]
     #[inline(always)]
     pub fn bfl0(&self) -> BFL0_R {
-        BFL0_R::new((self.bits & 0x01) != 0)
+        BFL0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Boundar1 Flag y"]
     #[inline(always)]
     pub fn bfl1(&self) -> BFL1_R {
-        BFL1_R::new(((self.bits >> 1) & 0x01) != 0)
+        BFL1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Boundar2 Flag y"]
     #[inline(always)]
     pub fn bfl2(&self) -> BFL2_R {
-        BFL2_R::new(((self.bits >> 2) & 0x01) != 0)
+        BFL2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Boundar3 Flag y"]
     #[inline(always)]
     pub fn bfl3(&self) -> BFL3_R {
-        BFL3_R::new(((self.bits >> 3) & 0x01) != 0)
+        BFL3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 16 - Enable Bit for Boundar0 Flag y"]
     #[inline(always)]
     pub fn bfe0(&self) -> BFE0_R {
-        BFE0_R::new(((self.bits >> 16) & 0x01) != 0)
+        BFE0_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Enable Bit for Boundar1 Flag y"]
     #[inline(always)]
     pub fn bfe1(&self) -> BFE1_R {
-        BFE1_R::new(((self.bits >> 17) & 0x01) != 0)
+        BFE1_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Enable Bit for Boundar2 Flag y"]
     #[inline(always)]
     pub fn bfe2(&self) -> BFE2_R {
-        BFE2_R::new(((self.bits >> 18) & 0x01) != 0)
+        BFE2_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Enable Bit for Boundar3 Flag y"]
     #[inline(always)]
     pub fn bfe3(&self) -> BFE3_R {
-        BFE3_R::new(((self.bits >> 19) & 0x01) != 0)
+        BFE3_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 16 - Enable Bit for Boundar0 Flag y"]
     #[inline(always)]
-    pub fn bfe0(&mut self) -> BFE0_W {
-        BFE0_W { w: self }
+    #[must_use]
+    pub fn bfe0(&mut self) -> BFE0_W<16> {
+        BFE0_W::new(self)
     }
     #[doc = "Bit 17 - Enable Bit for Boundar1 Flag y"]
     #[inline(always)]
-    pub fn bfe1(&mut self) -> BFE1_W {
-        BFE1_W { w: self }
+    #[must_use]
+    pub fn bfe1(&mut self) -> BFE1_W<17> {
+        BFE1_W::new(self)
     }
     #[doc = "Bit 18 - Enable Bit for Boundar2 Flag y"]
     #[inline(always)]
-    pub fn bfe2(&mut self) -> BFE2_W {
-        BFE2_W { w: self }
+    #[must_use]
+    pub fn bfe2(&mut self) -> BFE2_W<18> {
+        BFE2_W::new(self)
     }
     #[doc = "Bit 19 - Enable Bit for Boundar3 Flag y"]
     #[inline(always)]
-    pub fn bfe3(&mut self) -> BFE3_W {
-        BFE3_W { w: self }
+    #[must_use]
+    pub fn bfe3(&mut self) -> BFE3_W<19> {
+        BFE3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -632,11 +464,10 @@ impl crate::Readable for BFL_SPEC {
 #[doc = "`write(|w| ..)` method takes [bfl::W](W) writer structure"]
 impl crate::Writable for BFL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BFL to value 0"]
 impl crate::Resettable for BFL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

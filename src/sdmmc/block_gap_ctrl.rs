@@ -34,293 +34,10 @@ impl From<crate::W<BLOCK_GAP_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "SPI_MODE\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum SPI_MODE_A {
-    #[doc = "0: SD mode"]
-    VALUE1 = 0,
-    #[doc = "1: SPI mode"]
-    VALUE2 = 1,
-}
-impl From<SPI_MODE_A> for bool {
-    #[inline(always)]
-    fn from(variant: SPI_MODE_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `SPI_MODE` reader - SPI_MODE"]
-pub struct SPI_MODE_R(crate::FieldReader<bool, SPI_MODE_A>);
-impl SPI_MODE_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> SPI_MODE_A {
-        match self.bits {
-            false => SPI_MODE_A::VALUE1,
-            true => SPI_MODE_A::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline(always)]
-    pub fn is_value1(&self) -> bool {
-        **self == SPI_MODE_A::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline(always)]
-    pub fn is_value2(&self) -> bool {
-        **self == SPI_MODE_A::VALUE2
-    }
-}
-impl core::ops::Deref for SPI_MODE_R {
-    type Target = crate::FieldReader<bool, SPI_MODE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SPI_MODE` writer - SPI_MODE"]
-pub struct SPI_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SPI_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
-    #[doc = "SD mode"]
-    #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(SPI_MODE_A::VALUE1)
-    }
-    #[doc = "SPI mode"]
-    #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(SPI_MODE_A::VALUE2)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `INT_AT_BLOCK_GAP` reader - Interrupt At Block Gap"]
-pub struct INT_AT_BLOCK_GAP_R(crate::FieldReader<bool, bool>);
-impl INT_AT_BLOCK_GAP_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        INT_AT_BLOCK_GAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_AT_BLOCK_GAP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `INT_AT_BLOCK_GAP` writer - Interrupt At Block Gap"]
-pub struct INT_AT_BLOCK_GAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_AT_BLOCK_GAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Read Wait Control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum READ_WAIT_CTRL_A {
-    #[doc = "0: Disable Read Wait Control"]
-    VALUE1 = 0,
-    #[doc = "1: Enable Read Wait Control"]
-    VALUE2 = 1,
-}
-impl From<READ_WAIT_CTRL_A> for bool {
-    #[inline(always)]
-    fn from(variant: READ_WAIT_CTRL_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `READ_WAIT_CTRL` reader - Read Wait Control"]
-pub struct READ_WAIT_CTRL_R(crate::FieldReader<bool, READ_WAIT_CTRL_A>);
-impl READ_WAIT_CTRL_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        READ_WAIT_CTRL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> READ_WAIT_CTRL_A {
-        match self.bits {
-            false => READ_WAIT_CTRL_A::VALUE1,
-            true => READ_WAIT_CTRL_A::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline(always)]
-    pub fn is_value1(&self) -> bool {
-        **self == READ_WAIT_CTRL_A::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline(always)]
-    pub fn is_value2(&self) -> bool {
-        **self == READ_WAIT_CTRL_A::VALUE2
-    }
-}
-impl core::ops::Deref for READ_WAIT_CTRL_R {
-    type Target = crate::FieldReader<bool, READ_WAIT_CTRL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `READ_WAIT_CTRL` writer - Read Wait Control"]
-pub struct READ_WAIT_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> READ_WAIT_CTRL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: READ_WAIT_CTRL_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
-    #[doc = "Disable Read Wait Control"]
-    #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(READ_WAIT_CTRL_A::VALUE1)
-    }
-    #[doc = "Enable Read Wait Control"]
-    #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(READ_WAIT_CTRL_A::VALUE2)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Continue Request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum CONTINUE_REQ_A {
-    #[doc = "0: Ignored"]
-    VALUE1 = 0,
-    #[doc = "1: Restart"]
-    VALUE2 = 1,
-}
-impl From<CONTINUE_REQ_A> for bool {
-    #[inline(always)]
-    fn from(variant: CONTINUE_REQ_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `CONTINUE_REQ` reader - Continue Request"]
-pub struct CONTINUE_REQ_R(crate::FieldReader<bool, CONTINUE_REQ_A>);
-impl CONTINUE_REQ_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        CONTINUE_REQ_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> CONTINUE_REQ_A {
-        match self.bits {
-            false => CONTINUE_REQ_A::VALUE1,
-            true => CONTINUE_REQ_A::VALUE2,
-        }
-    }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
-    #[inline(always)]
-    pub fn is_value1(&self) -> bool {
-        **self == CONTINUE_REQ_A::VALUE1
-    }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
-    #[inline(always)]
-    pub fn is_value2(&self) -> bool {
-        **self == CONTINUE_REQ_A::VALUE2
-    }
-}
-impl core::ops::Deref for CONTINUE_REQ_R {
-    type Target = crate::FieldReader<bool, CONTINUE_REQ_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CONTINUE_REQ` writer - Continue Request"]
-pub struct CONTINUE_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONTINUE_REQ_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CONTINUE_REQ_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
-    #[doc = "Ignored"]
-    #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
-        self.variant(CONTINUE_REQ_A::VALUE1)
-    }
-    #[doc = "Restart"]
-    #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
-        self.variant(CONTINUE_REQ_A::VALUE2)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
+#[doc = "Field `STOP_AT_BLOCK_GAP` reader - Stop At Block Gap Request"]
+pub type STOP_AT_BLOCK_GAP_R = crate::BitReader<STOP_AT_BLOCK_GAP_A>;
 #[doc = "Stop At Block Gap Request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum STOP_AT_BLOCK_GAP_A {
     #[doc = "0: Transfer"]
     VALUE1 = 0,
@@ -333,13 +50,8 @@ impl From<STOP_AT_BLOCK_GAP_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `STOP_AT_BLOCK_GAP` reader - Stop At Block Gap Request"]
-pub struct STOP_AT_BLOCK_GAP_R(crate::FieldReader<bool, STOP_AT_BLOCK_GAP_A>);
 impl STOP_AT_BLOCK_GAP_R {
-    pub(crate) fn new(bits: bool) -> Self {
-        STOP_AT_BLOCK_GAP_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> STOP_AT_BLOCK_GAP_A {
         match self.bits {
@@ -350,31 +62,17 @@ impl STOP_AT_BLOCK_GAP_R {
     #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        **self == STOP_AT_BLOCK_GAP_A::VALUE1
+        *self == STOP_AT_BLOCK_GAP_A::VALUE1
     }
     #[doc = "Checks if the value of the field is `VALUE2`"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        **self == STOP_AT_BLOCK_GAP_A::VALUE2
-    }
-}
-impl core::ops::Deref for STOP_AT_BLOCK_GAP_R {
-    type Target = crate::FieldReader<bool, STOP_AT_BLOCK_GAP_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == STOP_AT_BLOCK_GAP_A::VALUE2
     }
 }
 #[doc = "Field `STOP_AT_BLOCK_GAP` writer - Stop At Block Gap Request"]
-pub struct STOP_AT_BLOCK_GAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STOP_AT_BLOCK_GAP_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: STOP_AT_BLOCK_GAP_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type STOP_AT_BLOCK_GAP_W<'a, const O: u8> = crate::BitWriter<'a, u8, BLOCK_GAP_CTRL_SPEC, STOP_AT_BLOCK_GAP_A, O>;
+impl<'a, const O: u8> STOP_AT_BLOCK_GAP_W<'a, O> {
     #[doc = "Transfer"]
     #[inline(always)]
     pub fn value1(self) -> &'a mut W {
@@ -385,75 +83,218 @@ impl<'a> STOP_AT_BLOCK_GAP_W<'a> {
     pub fn value2(self) -> &'a mut W {
         self.variant(STOP_AT_BLOCK_GAP_A::VALUE2)
     }
-    #[doc = r"Sets the field bit"]
+}
+#[doc = "Field `CONTINUE_REQ` reader - Continue Request"]
+pub type CONTINUE_REQ_R = crate::BitReader<CONTINUE_REQ_A>;
+#[doc = "Continue Request\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CONTINUE_REQ_A {
+    #[doc = "0: Ignored"]
+    VALUE1 = 0,
+    #[doc = "1: Restart"]
+    VALUE2 = 1,
+}
+impl From<CONTINUE_REQ_A> for bool {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
+    fn from(variant: CONTINUE_REQ_A) -> Self {
+        variant as u8 != 0
     }
-    #[doc = r"Clears the field bit"]
+}
+impl CONTINUE_REQ_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
+    pub fn variant(&self) -> CONTINUE_REQ_A {
+        match self.bits {
+            false => CONTINUE_REQ_A::VALUE1,
+            true => CONTINUE_REQ_A::VALUE2,
+        }
     }
-    #[doc = r"Writes raw bits to the field"]
+    #[doc = "Checks if the value of the field is `VALUE1`"]
     #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
+    pub fn is_value1(&self) -> bool {
+        *self == CONTINUE_REQ_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == CONTINUE_REQ_A::VALUE2
+    }
+}
+#[doc = "Field `CONTINUE_REQ` writer - Continue Request"]
+pub type CONTINUE_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u8, BLOCK_GAP_CTRL_SPEC, CONTINUE_REQ_A, O>;
+impl<'a, const O: u8> CONTINUE_REQ_W<'a, O> {
+    #[doc = "Ignored"]
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(CONTINUE_REQ_A::VALUE1)
+    }
+    #[doc = "Restart"]
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(CONTINUE_REQ_A::VALUE2)
+    }
+}
+#[doc = "Field `READ_WAIT_CTRL` reader - Read Wait Control"]
+pub type READ_WAIT_CTRL_R = crate::BitReader<READ_WAIT_CTRL_A>;
+#[doc = "Read Wait Control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum READ_WAIT_CTRL_A {
+    #[doc = "0: Disable Read Wait Control"]
+    VALUE1 = 0,
+    #[doc = "1: Enable Read Wait Control"]
+    VALUE2 = 1,
+}
+impl From<READ_WAIT_CTRL_A> for bool {
+    #[inline(always)]
+    fn from(variant: READ_WAIT_CTRL_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl READ_WAIT_CTRL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> READ_WAIT_CTRL_A {
+        match self.bits {
+            false => READ_WAIT_CTRL_A::VALUE1,
+            true => READ_WAIT_CTRL_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == READ_WAIT_CTRL_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == READ_WAIT_CTRL_A::VALUE2
+    }
+}
+#[doc = "Field `READ_WAIT_CTRL` writer - Read Wait Control"]
+pub type READ_WAIT_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, u8, BLOCK_GAP_CTRL_SPEC, READ_WAIT_CTRL_A, O>;
+impl<'a, const O: u8> READ_WAIT_CTRL_W<'a, O> {
+    #[doc = "Disable Read Wait Control"]
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(READ_WAIT_CTRL_A::VALUE1)
+    }
+    #[doc = "Enable Read Wait Control"]
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(READ_WAIT_CTRL_A::VALUE2)
+    }
+}
+#[doc = "Field `INT_AT_BLOCK_GAP` reader - Interrupt At Block Gap"]
+pub type INT_AT_BLOCK_GAP_R = crate::BitReader<bool>;
+#[doc = "Field `INT_AT_BLOCK_GAP` writer - Interrupt At Block Gap"]
+pub type INT_AT_BLOCK_GAP_W<'a, const O: u8> = crate::BitWriter<'a, u8, BLOCK_GAP_CTRL_SPEC, bool, O>;
+#[doc = "Field `SPI_MODE` reader - SPI_MODE"]
+pub type SPI_MODE_R = crate::BitReader<SPI_MODE_A>;
+#[doc = "SPI_MODE\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SPI_MODE_A {
+    #[doc = "0: SD mode"]
+    VALUE1 = 0,
+    #[doc = "1: SPI mode"]
+    VALUE2 = 1,
+}
+impl From<SPI_MODE_A> for bool {
+    #[inline(always)]
+    fn from(variant: SPI_MODE_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl SPI_MODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SPI_MODE_A {
+        match self.bits {
+            false => SPI_MODE_A::VALUE1,
+            true => SPI_MODE_A::VALUE2,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[inline(always)]
+    pub fn is_value1(&self) -> bool {
+        *self == SPI_MODE_A::VALUE1
+    }
+    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[inline(always)]
+    pub fn is_value2(&self) -> bool {
+        *self == SPI_MODE_A::VALUE2
+    }
+}
+#[doc = "Field `SPI_MODE` writer - SPI_MODE"]
+pub type SPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u8, BLOCK_GAP_CTRL_SPEC, SPI_MODE_A, O>;
+impl<'a, const O: u8> SPI_MODE_W<'a, O> {
+    #[doc = "SD mode"]
+    #[inline(always)]
+    pub fn value1(self) -> &'a mut W {
+        self.variant(SPI_MODE_A::VALUE1)
+    }
+    #[doc = "SPI mode"]
+    #[inline(always)]
+    pub fn value2(self) -> &'a mut W {
+        self.variant(SPI_MODE_A::VALUE2)
     }
 }
 impl R {
-    #[doc = "Bit 4 - SPI_MODE"]
+    #[doc = "Bit 0 - Stop At Block Gap Request"]
     #[inline(always)]
-    pub fn spi_mode(&self) -> SPI_MODE_R {
-        SPI_MODE_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Interrupt At Block Gap"]
-    #[inline(always)]
-    pub fn int_at_block_gap(&self) -> INT_AT_BLOCK_GAP_R {
-        INT_AT_BLOCK_GAP_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Read Wait Control"]
-    #[inline(always)]
-    pub fn read_wait_ctrl(&self) -> READ_WAIT_CTRL_R {
-        READ_WAIT_CTRL_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn stop_at_block_gap(&self) -> STOP_AT_BLOCK_GAP_R {
+        STOP_AT_BLOCK_GAP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Continue Request"]
     #[inline(always)]
     pub fn continue_req(&self) -> CONTINUE_REQ_R {
-        CONTINUE_REQ_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Stop At Block Gap Request"]
-    #[inline(always)]
-    pub fn stop_at_block_gap(&self) -> STOP_AT_BLOCK_GAP_R {
-        STOP_AT_BLOCK_GAP_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 4 - SPI_MODE"]
-    #[inline(always)]
-    pub fn spi_mode(&mut self) -> SPI_MODE_W {
-        SPI_MODE_W { w: self }
-    }
-    #[doc = "Bit 3 - Interrupt At Block Gap"]
-    #[inline(always)]
-    pub fn int_at_block_gap(&mut self) -> INT_AT_BLOCK_GAP_W {
-        INT_AT_BLOCK_GAP_W { w: self }
+        CONTINUE_REQ_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Read Wait Control"]
     #[inline(always)]
-    pub fn read_wait_ctrl(&mut self) -> READ_WAIT_CTRL_W {
-        READ_WAIT_CTRL_W { w: self }
+    pub fn read_wait_ctrl(&self) -> READ_WAIT_CTRL_R {
+        READ_WAIT_CTRL_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Interrupt At Block Gap"]
+    #[inline(always)]
+    pub fn int_at_block_gap(&self) -> INT_AT_BLOCK_GAP_R {
+        INT_AT_BLOCK_GAP_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - SPI_MODE"]
+    #[inline(always)]
+    pub fn spi_mode(&self) -> SPI_MODE_R {
+        SPI_MODE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Stop At Block Gap Request"]
+    #[inline(always)]
+    #[must_use]
+    pub fn stop_at_block_gap(&mut self) -> STOP_AT_BLOCK_GAP_W<0> {
+        STOP_AT_BLOCK_GAP_W::new(self)
     }
     #[doc = "Bit 1 - Continue Request"]
     #[inline(always)]
-    pub fn continue_req(&mut self) -> CONTINUE_REQ_W {
-        CONTINUE_REQ_W { w: self }
+    #[must_use]
+    pub fn continue_req(&mut self) -> CONTINUE_REQ_W<1> {
+        CONTINUE_REQ_W::new(self)
     }
-    #[doc = "Bit 0 - Stop At Block Gap Request"]
+    #[doc = "Bit 2 - Read Wait Control"]
     #[inline(always)]
-    pub fn stop_at_block_gap(&mut self) -> STOP_AT_BLOCK_GAP_W {
-        STOP_AT_BLOCK_GAP_W { w: self }
+    #[must_use]
+    pub fn read_wait_ctrl(&mut self) -> READ_WAIT_CTRL_W<2> {
+        READ_WAIT_CTRL_W::new(self)
+    }
+    #[doc = "Bit 3 - Interrupt At Block Gap"]
+    #[inline(always)]
+    #[must_use]
+    pub fn int_at_block_gap(&mut self) -> INT_AT_BLOCK_GAP_W<3> {
+        INT_AT_BLOCK_GAP_W::new(self)
+    }
+    #[doc = "Bit 4 - SPI_MODE"]
+    #[inline(always)]
+    #[must_use]
+    pub fn spi_mode(&mut self) -> SPI_MODE_W<4> {
+        SPI_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -474,11 +315,10 @@ impl crate::Readable for BLOCK_GAP_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [block_gap_ctrl::W](W) writer structure"]
 impl crate::Writable for BLOCK_GAP_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLOCK_GAP_CTRL to value 0"]
 impl crate::Resettable for BLOCK_GAP_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
