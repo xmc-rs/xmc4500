@@ -18,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
+      - uses: xmc-rs/toolchain@v1.0.0
         with:
           profile: minimal
           toolchain: stable
           override: true
-      - uses: actions-rs/cargo@v1
+      - uses: xmc-rs/cargo@v1.0.0
         with:
           command: install
           args: cargo-release
@@ -31,7 +31,7 @@ jobs:
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
       - uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/cargo@v1
+      - uses: xmc-rs/cargo@v1.0.0
         with:
           command: release
           args: ${{ inputs.version }} --execute --verbose --no-confirm
