@@ -11,7 +11,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.2.0
       - uses: xmc-rs/cargo@v1.0.0
         with:
           command: install
@@ -20,7 +20,7 @@ jobs:
         with:
           command: install
           args: form
-      - uses: oleksiyrudenko/gha-git-credentials@v2
+      - uses: oleksiyrudenko/gha-git-credentials@v2.1.1
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
       - run: |
@@ -30,7 +30,7 @@ jobs:
           form -i lib.rs -o src/
           cargo fmt
           rm lib.rs
-      - uses: tibdex/github-app-token@v1
+      - uses: tibdex/github-app-token@v1.7.0
         id: generate-token
         with:
           app_id: ${{ secrets.APP_ID }}
