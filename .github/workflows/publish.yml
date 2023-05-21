@@ -30,7 +30,7 @@ jobs:
       - uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
-      - uses: Swatinem/rust-cache@v2.3.0
+      - uses: Swatinem/rust-cache@v2.4.0
       - uses: xmc-rs/cargo@v1.0.0
         with:
           command: release
