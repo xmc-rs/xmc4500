@@ -71,7 +71,7 @@ impl INIT_R {
     }
 }
 #[doc = "Field `INIT` writer - Node Initialization"]
-pub type INIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, INIT_A, O>;
+pub type INIT_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, INIT_A>;
 impl<'a, const O: u8> INIT_W<'a, O> {
     #[doc = "Resetting bit INIT enables the participation of the node in the CAN traffic. If the CAN node is in the bus-off state, the ongoing bus-off recovery (which does not depend on the INIT bit) is continued. With the end of the bus-off recovery sequence the CAN node is allowed to take part in the CAN traffic. If the CAN node is not in the bus-off state, a sequence of 11 consecutive recessive bits must be detected before the node is allowed to take part in the CAN traffic."]
     #[inline(always)]
@@ -121,7 +121,7 @@ impl TRIE_R {
     }
 }
 #[doc = "Field `TRIE` writer - Transfer Interrupt Enable"]
-pub type TRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, TRIE_A, O>;
+pub type TRIE_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, TRIE_A>;
 impl<'a, const O: u8> TRIE_W<'a, O> {
     #[doc = "Transfer interrupt is disabled."]
     #[inline(always)]
@@ -171,7 +171,7 @@ impl LECIE_R {
     }
 }
 #[doc = "Field `LECIE` writer - LEC Indicated Error Interrupt Enable"]
-pub type LECIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, LECIE_A, O>;
+pub type LECIE_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, LECIE_A>;
 impl<'a, const O: u8> LECIE_W<'a, O> {
     #[doc = "Last error code interrupt is disabled."]
     #[inline(always)]
@@ -221,7 +221,7 @@ impl ALIE_R {
     }
 }
 #[doc = "Field `ALIE` writer - Alert Interrupt Enable"]
-pub type ALIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, ALIE_A, O>;
+pub type ALIE_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, ALIE_A>;
 impl<'a, const O: u8> ALIE_W<'a, O> {
     #[doc = "Alert interrupt is disabled."]
     #[inline(always)]
@@ -235,9 +235,9 @@ impl<'a, const O: u8> ALIE_W<'a, O> {
     }
 }
 #[doc = "Field `CANDIS` reader - CAN Disable"]
-pub type CANDIS_R = crate::BitReader<bool>;
+pub type CANDIS_R = crate::BitReader;
 #[doc = "Field `CANDIS` writer - CAN Disable"]
-pub type CANDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, bool, O>;
+pub type CANDIS_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O>;
 #[doc = "Field `CCE` reader - Configuration Change Enable"]
 pub type CCE_R = crate::BitReader<CCE_A>;
 #[doc = "Configuration Change Enable\n\nValue on reset: 0"]
@@ -275,7 +275,7 @@ impl CCE_R {
     }
 }
 #[doc = "Field `CCE` writer - Configuration Change Enable"]
-pub type CCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, CCE_A, O>;
+pub type CCE_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, CCE_A>;
 impl<'a, const O: u8> CCE_W<'a, O> {
     #[doc = "The Bit Timing Register, the Port Control Register, and the Error Counter Register may only be read. All attempts to modify them are ignored."]
     #[inline(always)]
@@ -289,9 +289,9 @@ impl<'a, const O: u8> CCE_W<'a, O> {
     }
 }
 #[doc = "Field `CALM` reader - CAN Analyzer Mode"]
-pub type CALM_R = crate::BitReader<bool>;
+pub type CALM_R = crate::BitReader;
 #[doc = "Field `CALM` writer - CAN Analyzer Mode"]
-pub type CALM_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, bool, O>;
+pub type CALM_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O>;
 #[doc = "Field `SUSEN` reader - Suspend Enable"]
 pub type SUSEN_R = crate::BitReader<SUSEN_A>;
 #[doc = "Suspend Enable\n\nValue on reset: 0"]
@@ -329,7 +329,7 @@ impl SUSEN_R {
     }
 }
 #[doc = "Field `SUSEN` writer - Suspend Enable"]
-pub type SUSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NCR_SPEC, SUSEN_A, O>;
+pub type SUSEN_W<'a, const O: u8> = crate::BitWriter<'a, NCR_SPEC, O, SUSEN_A>;
 impl<'a, const O: u8> SUSEN_W<'a, O> {
     #[doc = "An OCDS suspend trigger is ignored by the CAN node."]
     #[inline(always)]

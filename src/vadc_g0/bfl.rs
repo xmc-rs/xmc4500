@@ -215,7 +215,7 @@ impl BFE0_R {
     }
 }
 #[doc = "Field `BFE0` writer - Enable Bit for Boundar0 Flag y"]
-pub type BFE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE0_A, O>;
+pub type BFE0_W<'a, const O: u8> = crate::BitWriter<'a, BFL_SPEC, O, BFE0_A>;
 impl<'a, const O: u8> BFE0_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
@@ -265,7 +265,7 @@ impl BFE1_R {
     }
 }
 #[doc = "Field `BFE1` writer - Enable Bit for Boundar1 Flag y"]
-pub type BFE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE1_A, O>;
+pub type BFE1_W<'a, const O: u8> = crate::BitWriter<'a, BFL_SPEC, O, BFE1_A>;
 impl<'a, const O: u8> BFE1_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
@@ -315,7 +315,7 @@ impl BFE2_R {
     }
 }
 #[doc = "Field `BFE2` writer - Enable Bit for Boundar2 Flag y"]
-pub type BFE2_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE2_A, O>;
+pub type BFE2_W<'a, const O: u8> = crate::BitWriter<'a, BFL_SPEC, O, BFE2_A>;
 impl<'a, const O: u8> BFE2_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]
@@ -365,7 +365,7 @@ impl BFE3_R {
     }
 }
 #[doc = "Field `BFE3` writer - Enable Bit for Boundar3 Flag y"]
-pub type BFE3_W<'a, const O: u8> = crate::BitWriter<'a, u32, BFL_SPEC, BFE3_A, O>;
+pub type BFE3_W<'a, const O: u8> = crate::BitWriter<'a, BFL_SPEC, O, BFE3_A>;
 impl<'a, const O: u8> BFE3_W<'a, O> {
     #[doc = "Output 0 on this channel"]
     #[inline(always)]

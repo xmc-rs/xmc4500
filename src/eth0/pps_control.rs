@@ -35,25 +35,25 @@ impl From<crate::W<PPS_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `PPSCTRL_PPSCMD` reader - PPSCTRL0 or PPSCMD0"]
-pub type PPSCTRL_PPSCMD_R = crate::FieldReader<u8, u8>;
+pub type PPSCTRL_PPSCMD_R = crate::FieldReader;
 #[doc = "Field `PPSCTRL_PPSCMD` writer - PPSCTRL0 or PPSCMD0"]
-pub type PPSCTRL_PPSCMD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PPS_CONTROL_SPEC, u8, u8, 4, O>;
+pub type PPSCTRL_PPSCMD_W<'a, const O: u8> = crate::FieldWriter<'a, PPS_CONTROL_SPEC, 4, O>;
 #[doc = "Field `PPSEN0` reader - Flexible PPS Output Mode Enable"]
-pub type PPSEN0_R = crate::BitReader<bool>;
+pub type PPSEN0_R = crate::BitReader;
 #[doc = "Field `TRGTMODSEL0` reader - Target Time Register Mode for PPS0 Output"]
-pub type TRGTMODSEL0_R = crate::FieldReader<u8, u8>;
+pub type TRGTMODSEL0_R = crate::FieldReader;
 #[doc = "Field `PPSCMD1` reader - Flexible PPS1 Output Control"]
-pub type PPSCMD1_R = crate::FieldReader<u8, u8>;
+pub type PPSCMD1_R = crate::FieldReader;
 #[doc = "Field `TRGTMODSEL1` reader - Target Time Register Mode for PPS1 Output"]
-pub type TRGTMODSEL1_R = crate::FieldReader<u8, u8>;
+pub type TRGTMODSEL1_R = crate::FieldReader;
 #[doc = "Field `PPSCMD2` reader - Flexible PPS2 Output Control"]
-pub type PPSCMD2_R = crate::FieldReader<u8, u8>;
+pub type PPSCMD2_R = crate::FieldReader;
 #[doc = "Field `TRGTMODSEL2` reader - Target Time Register Mode for PPS2 Output"]
-pub type TRGTMODSEL2_R = crate::FieldReader<u8, u8>;
+pub type TRGTMODSEL2_R = crate::FieldReader;
 #[doc = "Field `PPSCMD3` reader - Flexible PPS3 Output Control"]
-pub type PPSCMD3_R = crate::FieldReader<u8, u8>;
+pub type PPSCMD3_R = crate::FieldReader;
 #[doc = "Field `TRGTMODSEL3` reader - Target Time Register Mode for PPS3 Output"]
-pub type TRGTMODSEL3_R = crate::FieldReader<u8, u8>;
+pub type TRGTMODSEL3_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
     #[inline(always)]

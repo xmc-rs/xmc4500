@@ -35,9 +35,9 @@ impl From<crate::W<MCR_SPEC>> for W {
     }
 }
 #[doc = "Field `MPSEL` reader - Message Pending Selector"]
-pub type MPSEL_R = crate::FieldReader<u8, u8>;
+pub type MPSEL_R = crate::FieldReader;
 #[doc = "Field `MPSEL` writer - Message Pending Selector"]
-pub type MPSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MCR_SPEC, u8, u8, 4, O>;
+pub type MPSEL_W<'a, const O: u8> = crate::FieldWriter<'a, MCR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]

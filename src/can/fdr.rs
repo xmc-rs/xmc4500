@@ -35,35 +35,35 @@ impl From<crate::W<FDR_SPEC>> for W {
     }
 }
 #[doc = "Field `STEP` reader - Step Value"]
-pub type STEP_R = crate::FieldReader<u16, u16>;
+pub type STEP_R = crate::FieldReader<u16>;
 #[doc = "Field `STEP` writer - Step Value"]
-pub type STEP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDR_SPEC, u16, u16, 10, O>;
+pub type STEP_W<'a, const O: u8> = crate::FieldWriter<'a, FDR_SPEC, 10, O, u16>;
 #[doc = "Field `SM` reader - Suspend Mode"]
-pub type SM_R = crate::BitReader<bool>;
+pub type SM_R = crate::BitReader;
 #[doc = "Field `SM` writer - Suspend Mode"]
-pub type SM_W<'a, const O: u8> = crate::BitWriter<'a, u32, FDR_SPEC, bool, O>;
+pub type SM_W<'a, const O: u8> = crate::BitWriter<'a, FDR_SPEC, O>;
 #[doc = "Field `SC` reader - Suspend Control"]
-pub type SC_R = crate::FieldReader<u8, u8>;
+pub type SC_R = crate::FieldReader;
 #[doc = "Field `SC` writer - Suspend Control"]
-pub type SC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDR_SPEC, u8, u8, 2, O>;
+pub type SC_W<'a, const O: u8> = crate::FieldWriter<'a, FDR_SPEC, 2, O>;
 #[doc = "Field `DM` reader - Divider Mode"]
-pub type DM_R = crate::FieldReader<u8, u8>;
+pub type DM_R = crate::FieldReader;
 #[doc = "Field `DM` writer - Divider Mode"]
-pub type DM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDR_SPEC, u8, u8, 2, O>;
+pub type DM_W<'a, const O: u8> = crate::FieldWriter<'a, FDR_SPEC, 2, O>;
 #[doc = "Field `RESULT` reader - Result Value"]
-pub type RESULT_R = crate::FieldReader<u16, u16>;
+pub type RESULT_R = crate::FieldReader<u16>;
 #[doc = "Field `SUSACK` reader - Suspend Mode Acknowledge"]
-pub type SUSACK_R = crate::BitReader<bool>;
+pub type SUSACK_R = crate::BitReader;
 #[doc = "Field `SUSREQ` reader - Suspend Mode Request"]
-pub type SUSREQ_R = crate::BitReader<bool>;
+pub type SUSREQ_R = crate::BitReader;
 #[doc = "Field `ENHW` reader - Enable Hardware Clock Control"]
-pub type ENHW_R = crate::BitReader<bool>;
+pub type ENHW_R = crate::BitReader;
 #[doc = "Field `ENHW` writer - Enable Hardware Clock Control"]
-pub type ENHW_W<'a, const O: u8> = crate::BitWriter<'a, u32, FDR_SPEC, bool, O>;
+pub type ENHW_W<'a, const O: u8> = crate::BitWriter<'a, FDR_SPEC, O>;
 #[doc = "Field `DISCLK` reader - Disable Clock"]
-pub type DISCLK_R = crate::BitReader<bool>;
+pub type DISCLK_R = crate::BitReader;
 #[doc = "Field `DISCLK` writer - Disable Clock"]
-pub type DISCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, FDR_SPEC, bool, O>;
+pub type DISCLK_W<'a, const O: u8> = crate::BitWriter<'a, FDR_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - Step Value"]
     #[inline(always)]
