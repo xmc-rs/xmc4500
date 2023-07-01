@@ -35,13 +35,13 @@ impl From<crate::W<BRSCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `XTSEL` reader - External Trigger Input Selection"]
-pub type XTSEL_R = crate::FieldReader<u8, u8>;
+pub type XTSEL_R = crate::FieldReader;
 #[doc = "Field `XTSEL` writer - External Trigger Input Selection"]
-pub type XTSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BRSCTRL_SPEC, u8, u8, 4, O>;
+pub type XTSEL_W<'a, const O: u8> = crate::FieldWriter<'a, BRSCTRL_SPEC, 4, O>;
 #[doc = "Field `XTLVL` reader - External Trigger Level"]
-pub type XTLVL_R = crate::BitReader<bool>;
+pub type XTLVL_R = crate::BitReader;
 #[doc = "Field `XTMODE` reader - Trigger Operating Mode"]
-pub type XTMODE_R = crate::FieldReader<u8, XTMODE_A>;
+pub type XTMODE_R = crate::FieldReader<XTMODE_A>;
 #[doc = "Trigger Operating Mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -60,6 +60,9 @@ impl From<XTMODE_A> for u8 {
     fn from(variant: XTMODE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for XTMODE_A {
+    type Ux = u8;
 }
 impl XTMODE_R {
     #[doc = "Get enumerated values variant"]
@@ -95,7 +98,7 @@ impl XTMODE_R {
     }
 }
 #[doc = "Field `XTMODE` writer - Trigger Operating Mode"]
-pub type XTMODE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, BRSCTRL_SPEC, u8, XTMODE_A, 2, O>;
+pub type XTMODE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, BRSCTRL_SPEC, 2, O, XTMODE_A>;
 impl<'a, const O: u8> XTMODE_W<'a, O> {
     #[doc = "No external trigger"]
     #[inline(always)]
@@ -133,7 +136,7 @@ impl From<XTWC_AW> for bool {
     }
 }
 #[doc = "Field `XTWC` writer - Write Control for Trigger Configuration"]
-pub type XTWC_W<'a, const O: u8> = crate::BitWriter<'a, u32, BRSCTRL_SPEC, XTWC_AW, O>;
+pub type XTWC_W<'a, const O: u8> = crate::BitWriter<'a, BRSCTRL_SPEC, O, XTWC_AW>;
 impl<'a, const O: u8> XTWC_W<'a, O> {
     #[doc = "No write access to trigger configuration"]
     #[inline(always)]
@@ -147,11 +150,11 @@ impl<'a, const O: u8> XTWC_W<'a, O> {
     }
 }
 #[doc = "Field `GTSEL` reader - Gate Input Selection"]
-pub type GTSEL_R = crate::FieldReader<u8, u8>;
+pub type GTSEL_R = crate::FieldReader;
 #[doc = "Field `GTSEL` writer - Gate Input Selection"]
-pub type GTSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BRSCTRL_SPEC, u8, u8, 4, O>;
+pub type GTSEL_W<'a, const O: u8> = crate::FieldWriter<'a, BRSCTRL_SPEC, 4, O>;
 #[doc = "Field `GTLVL` reader - Gate Input Level"]
-pub type GTLVL_R = crate::BitReader<bool>;
+pub type GTLVL_R = crate::BitReader;
 #[doc = "Write Control for Gate Configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GTWC_AW {
@@ -167,7 +170,7 @@ impl From<GTWC_AW> for bool {
     }
 }
 #[doc = "Field `GTWC` writer - Write Control for Gate Configuration"]
-pub type GTWC_W<'a, const O: u8> = crate::BitWriter<'a, u32, BRSCTRL_SPEC, GTWC_AW, O>;
+pub type GTWC_W<'a, const O: u8> = crate::BitWriter<'a, BRSCTRL_SPEC, O, GTWC_AW>;
 impl<'a, const O: u8> GTWC_W<'a, O> {
     #[doc = "No write access to gate configuration"]
     #[inline(always)]
