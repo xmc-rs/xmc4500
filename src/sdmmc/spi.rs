@@ -35,9 +35,9 @@ impl From<crate::W<SPI_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_INT_SUPPORT` reader - SPI INT SUPPORT"]
-pub type SPI_INT_SUPPORT_R = crate::FieldReader<u8, u8>;
+pub type SPI_INT_SUPPORT_R = crate::FieldReader;
 #[doc = "Field `SPI_INT_SUPPORT` writer - SPI INT SUPPORT"]
-pub type SPI_INT_SUPPORT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_SPEC, u8, u8, 8, O>;
+pub type SPI_INT_SUPPORT_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
