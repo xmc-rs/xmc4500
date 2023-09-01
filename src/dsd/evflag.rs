@@ -1,39 +1,7 @@
 #[doc = "Register `EVFLAG` reader"]
-pub struct R(crate::R<EVFLAG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EVFLAG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EVFLAG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EVFLAG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EVFLAG_SPEC>;
 #[doc = "Register `EVFLAG` writer"]
-pub struct W(crate::W<EVFLAG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EVFLAG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EVFLAG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EVFLAG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EVFLAG_SPEC>;
 #[doc = "Field `RESEV0` reader - Result Event"]
 pub type RESEV0_R = crate::BitReader<RESEV0_A>;
 #[doc = "Result Event\n\nValue on reset: 0"]
@@ -59,28 +27,31 @@ impl RESEV0_R {
             true => RESEV0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No result event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RESEV0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RESEV0_A::VALUE2
     }
 }
 #[doc = "Field `RESEV0` writer - Result Event"]
-pub type RESEV0_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, RESEV0_A>;
-impl<'a, const O: u8> RESEV0_W<'a, O> {
+pub type RESEV0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RESEV0_A>;
+impl<'a, REG, const O: u8> RESEV0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No result event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV0_A::VALUE1)
     }
     #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV0_A::VALUE2)
     }
 }
@@ -109,28 +80,31 @@ impl RESEV1_R {
             true => RESEV1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No result event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RESEV1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RESEV1_A::VALUE2
     }
 }
 #[doc = "Field `RESEV1` writer - Result Event"]
-pub type RESEV1_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, RESEV1_A>;
-impl<'a, const O: u8> RESEV1_W<'a, O> {
+pub type RESEV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RESEV1_A>;
+impl<'a, REG, const O: u8> RESEV1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No result event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV1_A::VALUE1)
     }
     #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV1_A::VALUE2)
     }
 }
@@ -159,28 +133,31 @@ impl RESEV2_R {
             true => RESEV2_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No result event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RESEV2_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RESEV2_A::VALUE2
     }
 }
 #[doc = "Field `RESEV2` writer - Result Event"]
-pub type RESEV2_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, RESEV2_A>;
-impl<'a, const O: u8> RESEV2_W<'a, O> {
+pub type RESEV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RESEV2_A>;
+impl<'a, REG, const O: u8> RESEV2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No result event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV2_A::VALUE1)
     }
     #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV2_A::VALUE2)
     }
 }
@@ -209,28 +186,31 @@ impl RESEV3_R {
             true => RESEV3_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No result event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == RESEV3_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == RESEV3_A::VALUE2
     }
 }
 #[doc = "Field `RESEV3` writer - Result Event"]
-pub type RESEV3_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, RESEV3_A>;
-impl<'a, const O: u8> RESEV3_W<'a, O> {
+pub type RESEV3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RESEV3_A>;
+impl<'a, REG, const O: u8> RESEV3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No result event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV3_A::VALUE1)
     }
     #[doc = "A new result has been stored in register RESMx"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(RESEV3_A::VALUE2)
     }
 }
@@ -259,28 +239,31 @@ impl ALEV0_R {
             true => ALEV0_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV0_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV0_A::VALUE2
     }
 }
 #[doc = "Field `ALEV0` writer - Alarm Event"]
-pub type ALEV0_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV0_A>;
-impl<'a, const O: u8> ALEV0_W<'a, O> {
+pub type ALEV0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV0_A>;
+impl<'a, REG, const O: u8> ALEV0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV0_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV0_A::VALUE2)
     }
 }
@@ -309,28 +292,31 @@ impl ALEV1_R {
             true => ALEV1_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV1_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV1_A::VALUE2
     }
 }
 #[doc = "Field `ALEV1` writer - Alarm Event"]
-pub type ALEV1_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV1_A>;
-impl<'a, const O: u8> ALEV1_W<'a, O> {
+pub type ALEV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV1_A>;
+impl<'a, REG, const O: u8> ALEV1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV1_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV1_A::VALUE2)
     }
 }
@@ -359,28 +345,31 @@ impl ALEV2_R {
             true => ALEV2_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV2_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV2_A::VALUE2
     }
 }
 #[doc = "Field `ALEV2` writer - Alarm Event"]
-pub type ALEV2_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV2_A>;
-impl<'a, const O: u8> ALEV2_W<'a, O> {
+pub type ALEV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV2_A>;
+impl<'a, REG, const O: u8> ALEV2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV2_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV2_A::VALUE2)
     }
 }
@@ -409,28 +398,31 @@ impl ALEV3_R {
             true => ALEV3_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV3_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV3_A::VALUE2
     }
 }
 #[doc = "Field `ALEV3` writer - Alarm Event"]
-pub type ALEV3_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV3_A>;
-impl<'a, const O: u8> ALEV3_W<'a, O> {
+pub type ALEV3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV3_A>;
+impl<'a, REG, const O: u8> ALEV3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV3_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV3_A::VALUE2)
     }
 }
@@ -459,28 +451,31 @@ impl ALEV4_R {
             true => ALEV4_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV4_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV4_A::VALUE2
     }
 }
 #[doc = "Field `ALEV4` writer - Alarm Event"]
-pub type ALEV4_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV4_A>;
-impl<'a, const O: u8> ALEV4_W<'a, O> {
+pub type ALEV4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV4_A>;
+impl<'a, REG, const O: u8> ALEV4_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV4_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV4_A::VALUE2)
     }
 }
@@ -509,28 +504,31 @@ impl ALEV5_R {
             true => ALEV5_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV5_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV5_A::VALUE2
     }
 }
 #[doc = "Field `ALEV5` writer - Alarm Event"]
-pub type ALEV5_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV5_A>;
-impl<'a, const O: u8> ALEV5_W<'a, O> {
+pub type ALEV5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV5_A>;
+impl<'a, REG, const O: u8> ALEV5_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV5_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV5_A::VALUE2)
     }
 }
@@ -559,28 +557,31 @@ impl ALEV6_R {
             true => ALEV6_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV6_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV6_A::VALUE2
     }
 }
 #[doc = "Field `ALEV6` writer - Alarm Event"]
-pub type ALEV6_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV6_A>;
-impl<'a, const O: u8> ALEV6_W<'a, O> {
+pub type ALEV6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV6_A>;
+impl<'a, REG, const O: u8> ALEV6_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV6_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV6_A::VALUE2)
     }
 }
@@ -609,28 +610,31 @@ impl ALEV7_R {
             true => ALEV7_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV7_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV7_A::VALUE2
     }
 }
 #[doc = "Field `ALEV7` writer - Alarm Event"]
-pub type ALEV7_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV7_A>;
-impl<'a, const O: u8> ALEV7_W<'a, O> {
+pub type ALEV7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV7_A>;
+impl<'a, REG, const O: u8> ALEV7_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV7_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV7_A::VALUE2)
     }
 }
@@ -659,28 +663,31 @@ impl ALEV8_R {
             true => ALEV8_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV8_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV8_A::VALUE2
     }
 }
 #[doc = "Field `ALEV8` writer - Alarm Event"]
-pub type ALEV8_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV8_A>;
-impl<'a, const O: u8> ALEV8_W<'a, O> {
+pub type ALEV8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV8_A>;
+impl<'a, REG, const O: u8> ALEV8_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV8_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV8_A::VALUE2)
     }
 }
@@ -709,28 +716,31 @@ impl ALEV9_R {
             true => ALEV9_A::VALUE2,
         }
     }
-    #[doc = "Checks if the value of the field is `VALUE1`"]
+    #[doc = "No alarm event"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
         *self == ALEV9_A::VALUE1
     }
-    #[doc = "Checks if the value of the field is `VALUE2`"]
+    #[doc = "An alarm event has occurred"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == ALEV9_A::VALUE2
     }
 }
 #[doc = "Field `ALEV9` writer - Alarm Event"]
-pub type ALEV9_W<'a, const O: u8> = crate::BitWriter<'a, EVFLAG_SPEC, O, ALEV9_A>;
-impl<'a, const O: u8> ALEV9_W<'a, O> {
+pub type ALEV9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALEV9_A>;
+impl<'a, REG, const O: u8> ALEV9_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "No alarm event"]
     #[inline(always)]
-    pub fn value1(self) -> &'a mut W {
+    pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV9_A::VALUE1)
     }
     #[doc = "An alarm event has occurred"]
     #[inline(always)]
-    pub fn value2(self) -> &'a mut W {
+    pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(ALEV9_A::VALUE2)
     }
 }
@@ -810,106 +820,103 @@ impl W {
     #[doc = "Bit 0 - Result Event"]
     #[inline(always)]
     #[must_use]
-    pub fn resev0(&mut self) -> RESEV0_W<0> {
+    pub fn resev0(&mut self) -> RESEV0_W<EVFLAG_SPEC, 0> {
         RESEV0_W::new(self)
     }
     #[doc = "Bit 1 - Result Event"]
     #[inline(always)]
     #[must_use]
-    pub fn resev1(&mut self) -> RESEV1_W<1> {
+    pub fn resev1(&mut self) -> RESEV1_W<EVFLAG_SPEC, 1> {
         RESEV1_W::new(self)
     }
     #[doc = "Bit 2 - Result Event"]
     #[inline(always)]
     #[must_use]
-    pub fn resev2(&mut self) -> RESEV2_W<2> {
+    pub fn resev2(&mut self) -> RESEV2_W<EVFLAG_SPEC, 2> {
         RESEV2_W::new(self)
     }
     #[doc = "Bit 3 - Result Event"]
     #[inline(always)]
     #[must_use]
-    pub fn resev3(&mut self) -> RESEV3_W<3> {
+    pub fn resev3(&mut self) -> RESEV3_W<EVFLAG_SPEC, 3> {
         RESEV3_W::new(self)
     }
     #[doc = "Bit 16 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev0(&mut self) -> ALEV0_W<16> {
+    pub fn alev0(&mut self) -> ALEV0_W<EVFLAG_SPEC, 16> {
         ALEV0_W::new(self)
     }
     #[doc = "Bit 17 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev1(&mut self) -> ALEV1_W<17> {
+    pub fn alev1(&mut self) -> ALEV1_W<EVFLAG_SPEC, 17> {
         ALEV1_W::new(self)
     }
     #[doc = "Bit 18 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev2(&mut self) -> ALEV2_W<18> {
+    pub fn alev2(&mut self) -> ALEV2_W<EVFLAG_SPEC, 18> {
         ALEV2_W::new(self)
     }
     #[doc = "Bit 19 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev3(&mut self) -> ALEV3_W<19> {
+    pub fn alev3(&mut self) -> ALEV3_W<EVFLAG_SPEC, 19> {
         ALEV3_W::new(self)
     }
     #[doc = "Bit 20 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev4(&mut self) -> ALEV4_W<20> {
+    pub fn alev4(&mut self) -> ALEV4_W<EVFLAG_SPEC, 20> {
         ALEV4_W::new(self)
     }
     #[doc = "Bit 21 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev5(&mut self) -> ALEV5_W<21> {
+    pub fn alev5(&mut self) -> ALEV5_W<EVFLAG_SPEC, 21> {
         ALEV5_W::new(self)
     }
     #[doc = "Bit 22 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev6(&mut self) -> ALEV6_W<22> {
+    pub fn alev6(&mut self) -> ALEV6_W<EVFLAG_SPEC, 22> {
         ALEV6_W::new(self)
     }
     #[doc = "Bit 23 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev7(&mut self) -> ALEV7_W<23> {
+    pub fn alev7(&mut self) -> ALEV7_W<EVFLAG_SPEC, 23> {
         ALEV7_W::new(self)
     }
     #[doc = "Bit 24 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev8(&mut self) -> ALEV8_W<24> {
+    pub fn alev8(&mut self) -> ALEV8_W<EVFLAG_SPEC, 24> {
         ALEV8_W::new(self)
     }
     #[doc = "Bit 25 - Alarm Event"]
     #[inline(always)]
     #[must_use]
-    pub fn alev9(&mut self) -> ALEV9_W<25> {
+    pub fn alev9(&mut self) -> ALEV9_W<EVFLAG_SPEC, 25> {
         ALEV9_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Event Flag Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [evflag](index.html) module"]
+#[doc = "Event Flag Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evflag::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evflag::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVFLAG_SPEC;
 impl crate::RegisterSpec for EVFLAG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [evflag::R](R) reader structure"]
-impl crate::Readable for EVFLAG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [evflag::W](W) writer structure"]
+#[doc = "`read()` method returns [`evflag::R`](R) reader structure"]
+impl crate::Readable for EVFLAG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`evflag::W`](W) writer structure"]
 impl crate::Writable for EVFLAG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

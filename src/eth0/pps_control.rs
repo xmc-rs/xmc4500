@@ -1,43 +1,11 @@
 #[doc = "Register `PPS_CONTROL` reader"]
-pub struct R(crate::R<PPS_CONTROL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PPS_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PPS_CONTROL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PPS_CONTROL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PPS_CONTROL_SPEC>;
 #[doc = "Register `PPS_CONTROL` writer"]
-pub struct W(crate::W<PPS_CONTROL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PPS_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PPS_CONTROL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PPS_CONTROL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PPS_CONTROL_SPEC>;
 #[doc = "Field `PPSCTRL_PPSCMD` reader - PPSCTRL0 or PPSCMD0"]
 pub type PPSCTRL_PPSCMD_R = crate::FieldReader;
 #[doc = "Field `PPSCTRL_PPSCMD` writer - PPSCTRL0 or PPSCMD0"]
-pub type PPSCTRL_PPSCMD_W<'a, const O: u8> = crate::FieldWriter<'a, PPS_CONTROL_SPEC, 4, O>;
+pub type PPSCTRL_PPSCMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PPSEN0` reader - Flexible PPS Output Mode Enable"]
 pub type PPSEN0_R = crate::BitReader;
 #[doc = "Field `TRGTMODSEL0` reader - Target Time Register Mode for PPS0 Output"]
@@ -105,28 +73,25 @@ impl W {
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
     #[inline(always)]
     #[must_use]
-    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<0> {
+    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<PPS_CONTROL_SPEC, 0> {
         PPSCTRL_PPSCMD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "PPS Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pps_control](index.html) module"]
+#[doc = "PPS Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pps_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pps_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PPS_CONTROL_SPEC;
 impl crate::RegisterSpec for PPS_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pps_control::R](R) reader structure"]
-impl crate::Readable for PPS_CONTROL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pps_control::W](W) writer structure"]
+#[doc = "`read()` method returns [`pps_control::R`](R) reader structure"]
+impl crate::Readable for PPS_CONTROL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pps_control::W`](W) writer structure"]
 impl crate::Writable for PPS_CONTROL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -29,55 +29,68 @@ pub struct RegisterBlock {
     #[doc = "0x34 - Deep Sleep Control Register"]
     pub dsleepcr: DSLEEPCR,
 }
-#[doc = "CLKSTAT (r) register accessor: an alias for `Reg<CLKSTAT_SPEC>`"]
+#[doc = "CLKSTAT (r) register accessor: Clock Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkstat::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clkstat`]
+module"]
 pub type CLKSTAT = crate::Reg<clkstat::CLKSTAT_SPEC>;
 #[doc = "Clock Status Register"]
 pub mod clkstat;
-#[doc = "CLKSET (w) register accessor: an alias for `Reg<CLKSET_SPEC>`"]
+#[doc = "CLKSET (w) register accessor: CLK Set Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clkset`]
+module"]
 pub type CLKSET = crate::Reg<clkset::CLKSET_SPEC>;
 #[doc = "CLK Set Register"]
 pub mod clkset;
-#[doc = "CLKCLR (w) register accessor: an alias for `Reg<CLKCLR_SPEC>`"]
+#[doc = "CLKCLR (w) register accessor: CLK Clear Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkclr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`clkclr`]
+module"]
 pub type CLKCLR = crate::Reg<clkclr::CLKCLR_SPEC>;
 #[doc = "CLK Clear Register"]
 pub mod clkclr;
-#[doc = "SYSCLKCR (rw) register accessor: an alias for `Reg<SYSCLKCR_SPEC>`"]
+#[doc = "SYSCLKCR (rw) register accessor: System Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sysclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sysclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sysclkcr`]
+module"]
 pub type SYSCLKCR = crate::Reg<sysclkcr::SYSCLKCR_SPEC>;
 #[doc = "System Clock Control Register"]
 pub mod sysclkcr;
-#[doc = "CPUCLKCR (rw) register accessor: an alias for `Reg<CPUCLKCR_SPEC>`"]
+#[doc = "CPUCLKCR (rw) register accessor: CPU Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpuclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpuclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cpuclkcr`]
+module"]
 pub type CPUCLKCR = crate::Reg<cpuclkcr::CPUCLKCR_SPEC>;
 #[doc = "CPU Clock Control Register"]
 pub mod cpuclkcr;
-#[doc = "PBCLKCR (rw) register accessor: an alias for `Reg<PBCLKCR_SPEC>`"]
+#[doc = "PBCLKCR (rw) register accessor: Peripheral Bus Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pbclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pbclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pbclkcr`]
+module"]
 pub type PBCLKCR = crate::Reg<pbclkcr::PBCLKCR_SPEC>;
 #[doc = "Peripheral Bus Clock Control Register"]
 pub mod pbclkcr;
-#[doc = "USBCLKCR (rw) register accessor: an alias for `Reg<USBCLKCR_SPEC>`"]
+#[doc = "USBCLKCR (rw) register accessor: USB Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usbclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usbclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`usbclkcr`]
+module"]
 pub type USBCLKCR = crate::Reg<usbclkcr::USBCLKCR_SPEC>;
 #[doc = "USB Clock Control Register"]
 pub mod usbclkcr;
-#[doc = "EBUCLKCR (rw) register accessor: an alias for `Reg<EBUCLKCR_SPEC>`"]
+#[doc = "EBUCLKCR (rw) register accessor: EBU Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ebuclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ebuclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ebuclkcr`]
+module"]
 pub type EBUCLKCR = crate::Reg<ebuclkcr::EBUCLKCR_SPEC>;
 #[doc = "EBU Clock Control Register"]
 pub mod ebuclkcr;
-#[doc = "CCUCLKCR (rw) register accessor: an alias for `Reg<CCUCLKCR_SPEC>`"]
+#[doc = "CCUCLKCR (rw) register accessor: CCU Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ccuclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccuclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ccuclkcr`]
+module"]
 pub type CCUCLKCR = crate::Reg<ccuclkcr::CCUCLKCR_SPEC>;
 #[doc = "CCU Clock Control Register"]
 pub mod ccuclkcr;
-#[doc = "WDTCLKCR (rw) register accessor: an alias for `Reg<WDTCLKCR_SPEC>`"]
+#[doc = "WDTCLKCR (rw) register accessor: WDT Clock Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdtclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdtclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`wdtclkcr`]
+module"]
 pub type WDTCLKCR = crate::Reg<wdtclkcr::WDTCLKCR_SPEC>;
 #[doc = "WDT Clock Control Register"]
 pub mod wdtclkcr;
-#[doc = "EXTCLKCR (rw) register accessor: an alias for `Reg<EXTCLKCR_SPEC>`"]
+#[doc = "EXTCLKCR (rw) register accessor: External Clock Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`extclkcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`extclkcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`extclkcr`]
+module"]
 pub type EXTCLKCR = crate::Reg<extclkcr::EXTCLKCR_SPEC>;
 #[doc = "External Clock Control"]
 pub mod extclkcr;
-#[doc = "SLEEPCR (rw) register accessor: an alias for `Reg<SLEEPCR_SPEC>`"]
+#[doc = "SLEEPCR (rw) register accessor: Sleep Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sleepcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sleepcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sleepcr`]
+module"]
 pub type SLEEPCR = crate::Reg<sleepcr::SLEEPCR_SPEC>;
 #[doc = "Sleep Control Register"]
 pub mod sleepcr;
-#[doc = "DSLEEPCR (rw) register accessor: an alias for `Reg<DSLEEPCR_SPEC>`"]
+#[doc = "DSLEEPCR (rw) register accessor: Deep Sleep Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsleepcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dsleepcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dsleepcr`]
+module"]
 pub type DSLEEPCR = crate::Reg<dsleepcr::DSLEEPCR_SPEC>;
 #[doc = "Deep Sleep Control Register"]
 pub mod dsleepcr;
