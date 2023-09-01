@@ -1,43 +1,11 @@
 #[doc = "Register `SPI` reader"]
-pub struct R(crate::R<SPI_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPI_SPEC>;
 #[doc = "Register `SPI` writer"]
-pub struct W(crate::W<SPI_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SPI_SPEC>;
 #[doc = "Field `SPI_INT_SUPPORT` reader - SPI INT SUPPORT"]
 pub type SPI_INT_SUPPORT_R = crate::FieldReader;
 #[doc = "Field `SPI_INT_SUPPORT` writer - SPI INT SUPPORT"]
-pub type SPI_INT_SUPPORT_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SPEC, 8, O>;
+pub type SPI_INT_SUPPORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_int_support(&mut self) -> SPI_INT_SUPPORT_W<0> {
+    pub fn spi_int_support(&mut self) -> SPI_INT_SUPPORT_W<SPI_SPEC, 0> {
         SPI_INT_SUPPORT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SPI Interrupt Support Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi](index.html) module"]
+#[doc = "SPI Interrupt Support Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SPEC;
 impl crate::RegisterSpec for SPI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi::R](R) reader structure"]
-impl crate::Readable for SPI_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi::W](W) writer structure"]
+#[doc = "`read()` method returns [`spi::R`](R) reader structure"]
+impl crate::Readable for SPI_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`spi::W`](W) writer structure"]
 impl crate::Writable for SPI_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

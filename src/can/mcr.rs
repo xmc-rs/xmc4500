@@ -1,43 +1,11 @@
 #[doc = "Register `MCR` reader"]
-pub struct R(crate::R<MCR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MCR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MCR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MCR_SPEC>;
 #[doc = "Register `MCR` writer"]
-pub struct W(crate::W<MCR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MCR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MCR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MCR_SPEC>;
 #[doc = "Field `MPSEL` reader - Message Pending Selector"]
 pub type MPSEL_R = crate::FieldReader;
 #[doc = "Field `MPSEL` writer - Message Pending Selector"]
-pub type MPSEL_W<'a, const O: u8> = crate::FieldWriter<'a, MCR_SPEC, 4, O>;
+pub type MPSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
     #[must_use]
-    pub fn mpsel(&mut self) -> MPSEL_W<12> {
+    pub fn mpsel(&mut self) -> MPSEL_W<MCR_SPEC, 12> {
         MPSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Module Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mcr](index.html) module"]
+#[doc = "Module Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MCR_SPEC;
 impl crate::RegisterSpec for MCR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mcr::R](R) reader structure"]
-impl crate::Readable for MCR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mcr::W](W) writer structure"]
+#[doc = "`read()` method returns [`mcr::R`](R) reader structure"]
+impl crate::Readable for MCR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mcr::W`](W) writer structure"]
 impl crate::Writable for MCR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
