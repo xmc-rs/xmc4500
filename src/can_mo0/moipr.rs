@@ -27,7 +27,7 @@ impl crate::FieldSpec for RXINP_A {
 impl RXINP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<RXINP_A> {
+    pub const fn variant(&self) -> Option<RXINP_A> {
         match self.bits {
             0 => Some(RXINP_A::VALUE1),
             1 => Some(RXINP_A::VALUE2),
@@ -99,7 +99,7 @@ impl crate::FieldSpec for TXINP_A {
 impl TXINP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TXINP_A> {
+    pub const fn variant(&self) -> Option<TXINP_A> {
         match self.bits {
             0 => Some(TXINP_A::VALUE1),
             1 => Some(TXINP_A::VALUE2),
@@ -201,7 +201,11 @@ impl W {
     pub fn cfcval(&mut self) -> CFCVAL_W<MOIPR_SPEC, 16> {
         CFCVAL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

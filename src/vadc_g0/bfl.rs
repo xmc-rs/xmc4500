@@ -21,7 +21,7 @@ impl From<BFL0_A> for bool {
 impl BFL0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFL0_A {
+    pub const fn variant(&self) -> BFL0_A {
         match self.bits {
             false => BFL0_A::VALUE1,
             true => BFL0_A::VALUE2,
@@ -57,7 +57,7 @@ impl From<BFL1_A> for bool {
 impl BFL1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFL1_A {
+    pub const fn variant(&self) -> BFL1_A {
         match self.bits {
             false => BFL1_A::VALUE1,
             true => BFL1_A::VALUE2,
@@ -93,7 +93,7 @@ impl From<BFL2_A> for bool {
 impl BFL2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFL2_A {
+    pub const fn variant(&self) -> BFL2_A {
         match self.bits {
             false => BFL2_A::VALUE1,
             true => BFL2_A::VALUE2,
@@ -129,7 +129,7 @@ impl From<BFL3_A> for bool {
 impl BFL3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFL3_A {
+    pub const fn variant(&self) -> BFL3_A {
         match self.bits {
             false => BFL3_A::VALUE1,
             true => BFL3_A::VALUE2,
@@ -165,7 +165,7 @@ impl From<BFE0_A> for bool {
 impl BFE0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFE0_A {
+    pub const fn variant(&self) -> BFE0_A {
         match self.bits {
             false => BFE0_A::VALUE1,
             true => BFE0_A::VALUE2,
@@ -218,7 +218,7 @@ impl From<BFE1_A> for bool {
 impl BFE1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFE1_A {
+    pub const fn variant(&self) -> BFE1_A {
         match self.bits {
             false => BFE1_A::VALUE1,
             true => BFE1_A::VALUE2,
@@ -271,7 +271,7 @@ impl From<BFE2_A> for bool {
 impl BFE2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFE2_A {
+    pub const fn variant(&self) -> BFE2_A {
         match self.bits {
             false => BFE2_A::VALUE1,
             true => BFE2_A::VALUE2,
@@ -324,7 +324,7 @@ impl From<BFE3_A> for bool {
 impl BFE3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFE3_A {
+    pub const fn variant(&self) -> BFE3_A {
         match self.bits {
             false => BFE3_A::VALUE1,
             true => BFE3_A::VALUE2,
@@ -425,7 +425,11 @@ impl W {
     pub fn bfe3(&mut self) -> BFE3_W<BFL_SPEC, 19> {
         BFE3_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

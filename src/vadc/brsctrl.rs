@@ -35,7 +35,7 @@ impl crate::FieldSpec for XTMODE_A {
 impl XTMODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> XTMODE_A {
+    pub const fn variant(&self) -> XTMODE_A {
         match self.bits {
             0 => XTMODE_A::VALUE1,
             1 => XTMODE_A::VALUE2,
@@ -219,7 +219,11 @@ impl W {
     pub fn gtwc(&mut self) -> GTWC_W<BRSCTRL_SPEC, 23> {
         GTWC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

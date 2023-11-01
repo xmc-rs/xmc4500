@@ -25,7 +25,7 @@ impl From<SFT_DISCON_A> for bool {
 impl SFT_DISCON_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SFT_DISCON_A {
+    pub const fn variant(&self) -> SFT_DISCON_A {
         match self.bits {
             false => SFT_DISCON_A::VALUE1,
             true => SFT_DISCON_A::VALUE2,
@@ -78,7 +78,7 @@ impl From<GNPINNAK_STS_A> for bool {
 impl GNPINNAK_STS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> GNPINNAK_STS_A {
+    pub const fn variant(&self) -> GNPINNAK_STS_A {
         match self.bits {
             false => GNPINNAK_STS_A::VALUE1,
             true => GNPINNAK_STS_A::VALUE2,
@@ -114,7 +114,7 @@ impl From<GOUTNAK_STS_A> for bool {
 impl GOUTNAK_STS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> GOUTNAK_STS_A {
+    pub const fn variant(&self) -> GOUTNAK_STS_A {
         match self.bits {
             false => GOUTNAK_STS_A::VALUE1,
             true => GOUTNAK_STS_A::VALUE2,
@@ -166,7 +166,7 @@ impl crate::FieldSpec for GMC_A {
 impl GMC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> GMC_A {
+    pub const fn variant(&self) -> GMC_A {
         match self.bits {
             0 => GMC_A::VALUE1,
             1 => GMC_A::VALUE2,
@@ -243,7 +243,7 @@ impl From<IGNR_FRM_NUM_A> for bool {
 impl IGNR_FRM_NUM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IGNR_FRM_NUM_A {
+    pub const fn variant(&self) -> IGNR_FRM_NUM_A {
         match self.bits {
             false => IGNR_FRM_NUM_A::VALUE1,
             true => IGNR_FRM_NUM_A::VALUE2,
@@ -373,7 +373,11 @@ impl W {
     pub fn nak_on_bble(&mut self) -> NAK_ON_BBLE_W<DCTL_SPEC, 16> {
         NAK_ON_BBLE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
