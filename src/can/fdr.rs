@@ -5,19 +5,19 @@ pub type W = crate::W<FDR_SPEC>;
 #[doc = "Field `STEP` reader - Step Value"]
 pub type STEP_R = crate::FieldReader<u16>;
 #[doc = "Field `STEP` writer - Step Value"]
-pub type STEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type STEP_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `SM` reader - Suspend Mode"]
 pub type SM_R = crate::BitReader;
 #[doc = "Field `SM` writer - Suspend Mode"]
-pub type SM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SC` reader - Suspend Control"]
 pub type SC_R = crate::FieldReader;
 #[doc = "Field `SC` writer - Suspend Control"]
-pub type SC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DM` reader - Divider Mode"]
 pub type DM_R = crate::FieldReader;
 #[doc = "Field `DM` writer - Divider Mode"]
-pub type DM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RESULT` reader - Result Value"]
 pub type RESULT_R = crate::FieldReader<u16>;
 #[doc = "Field `SUSACK` reader - Suspend Mode Acknowledge"]
@@ -27,11 +27,11 @@ pub type SUSREQ_R = crate::BitReader;
 #[doc = "Field `ENHW` reader - Enable Hardware Clock Control"]
 pub type ENHW_R = crate::BitReader;
 #[doc = "Field `ENHW` writer - Enable Hardware Clock Control"]
-pub type ENHW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENHW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DISCLK` reader - Disable Clock"]
 pub type DISCLK_R = crate::BitReader;
 #[doc = "Field `DISCLK` writer - Disable Clock"]
-pub type DISCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DISCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - Step Value"]
     #[inline(always)]
@@ -83,38 +83,38 @@ impl W {
     #[doc = "Bits 0:9 - Step Value"]
     #[inline(always)]
     #[must_use]
-    pub fn step(&mut self) -> STEP_W<FDR_SPEC, 0> {
-        STEP_W::new(self)
+    pub fn step(&mut self) -> STEP_W<FDR_SPEC> {
+        STEP_W::new(self, 0)
     }
     #[doc = "Bit 11 - Suspend Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sm(&mut self) -> SM_W<FDR_SPEC, 11> {
-        SM_W::new(self)
+    pub fn sm(&mut self) -> SM_W<FDR_SPEC> {
+        SM_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Suspend Control"]
     #[inline(always)]
     #[must_use]
-    pub fn sc(&mut self) -> SC_W<FDR_SPEC, 12> {
-        SC_W::new(self)
+    pub fn sc(&mut self) -> SC_W<FDR_SPEC> {
+        SC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Divider Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dm(&mut self) -> DM_W<FDR_SPEC, 14> {
-        DM_W::new(self)
+    pub fn dm(&mut self) -> DM_W<FDR_SPEC> {
+        DM_W::new(self, 14)
     }
     #[doc = "Bit 30 - Enable Hardware Clock Control"]
     #[inline(always)]
     #[must_use]
-    pub fn enhw(&mut self) -> ENHW_W<FDR_SPEC, 30> {
-        ENHW_W::new(self)
+    pub fn enhw(&mut self) -> ENHW_W<FDR_SPEC> {
+        ENHW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Disable Clock"]
     #[inline(always)]
     #[must_use]
-    pub fn disclk(&mut self) -> DISCLK_W<FDR_SPEC, 31> {
-        DISCLK_W::new(self)
+    pub fn disclk(&mut self) -> DISCLK_W<FDR_SPEC> {
+        DISCLK_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

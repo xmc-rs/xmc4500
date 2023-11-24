@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_SPEC>;
 #[doc = "Field `SPI_INT_SUPPORT` reader - SPI INT SUPPORT"]
 pub type SPI_INT_SUPPORT_R = crate::FieldReader;
 #[doc = "Field `SPI_INT_SUPPORT` writer - SPI INT SUPPORT"]
-pub type SPI_INT_SUPPORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPI_INT_SUPPORT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_int_support(&mut self) -> SPI_INT_SUPPORT_W<SPI_SPEC, 0> {
-        SPI_INT_SUPPORT_W::new(self)
+    pub fn spi_int_support(&mut self) -> SPI_INT_SUPPORT_W<SPI_SPEC> {
+        SPI_INT_SUPPORT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

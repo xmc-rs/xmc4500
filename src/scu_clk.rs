@@ -1,33 +1,87 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Clock Status Register"]
-    pub clkstat: CLKSTAT,
-    #[doc = "0x04 - CLK Set Register"]
-    pub clkset: CLKSET,
-    #[doc = "0x08 - CLK Clear Register"]
-    pub clkclr: CLKCLR,
-    #[doc = "0x0c - System Clock Control Register"]
-    pub sysclkcr: SYSCLKCR,
-    #[doc = "0x10 - CPU Clock Control Register"]
-    pub cpuclkcr: CPUCLKCR,
-    #[doc = "0x14 - Peripheral Bus Clock Control Register"]
-    pub pbclkcr: PBCLKCR,
-    #[doc = "0x18 - USB Clock Control Register"]
-    pub usbclkcr: USBCLKCR,
-    #[doc = "0x1c - EBU Clock Control Register"]
-    pub ebuclkcr: EBUCLKCR,
-    #[doc = "0x20 - CCU Clock Control Register"]
-    pub ccuclkcr: CCUCLKCR,
-    #[doc = "0x24 - WDT Clock Control Register"]
-    pub wdtclkcr: WDTCLKCR,
-    #[doc = "0x28 - External Clock Control"]
-    pub extclkcr: EXTCLKCR,
+    clkstat: CLKSTAT,
+    clkset: CLKSET,
+    clkclr: CLKCLR,
+    sysclkcr: SYSCLKCR,
+    cpuclkcr: CPUCLKCR,
+    pbclkcr: PBCLKCR,
+    usbclkcr: USBCLKCR,
+    ebuclkcr: EBUCLKCR,
+    ccuclkcr: CCUCLKCR,
+    wdtclkcr: WDTCLKCR,
+    extclkcr: EXTCLKCR,
     _reserved11: [u8; 0x04],
+    sleepcr: SLEEPCR,
+    dsleepcr: DSLEEPCR,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Clock Status Register"]
+    #[inline(always)]
+    pub const fn clkstat(&self) -> &CLKSTAT {
+        &self.clkstat
+    }
+    #[doc = "0x04 - CLK Set Register"]
+    #[inline(always)]
+    pub const fn clkset(&self) -> &CLKSET {
+        &self.clkset
+    }
+    #[doc = "0x08 - CLK Clear Register"]
+    #[inline(always)]
+    pub const fn clkclr(&self) -> &CLKCLR {
+        &self.clkclr
+    }
+    #[doc = "0x0c - System Clock Control Register"]
+    #[inline(always)]
+    pub const fn sysclkcr(&self) -> &SYSCLKCR {
+        &self.sysclkcr
+    }
+    #[doc = "0x10 - CPU Clock Control Register"]
+    #[inline(always)]
+    pub const fn cpuclkcr(&self) -> &CPUCLKCR {
+        &self.cpuclkcr
+    }
+    #[doc = "0x14 - Peripheral Bus Clock Control Register"]
+    #[inline(always)]
+    pub const fn pbclkcr(&self) -> &PBCLKCR {
+        &self.pbclkcr
+    }
+    #[doc = "0x18 - USB Clock Control Register"]
+    #[inline(always)]
+    pub const fn usbclkcr(&self) -> &USBCLKCR {
+        &self.usbclkcr
+    }
+    #[doc = "0x1c - EBU Clock Control Register"]
+    #[inline(always)]
+    pub const fn ebuclkcr(&self) -> &EBUCLKCR {
+        &self.ebuclkcr
+    }
+    #[doc = "0x20 - CCU Clock Control Register"]
+    #[inline(always)]
+    pub const fn ccuclkcr(&self) -> &CCUCLKCR {
+        &self.ccuclkcr
+    }
+    #[doc = "0x24 - WDT Clock Control Register"]
+    #[inline(always)]
+    pub const fn wdtclkcr(&self) -> &WDTCLKCR {
+        &self.wdtclkcr
+    }
+    #[doc = "0x28 - External Clock Control"]
+    #[inline(always)]
+    pub const fn extclkcr(&self) -> &EXTCLKCR {
+        &self.extclkcr
+    }
     #[doc = "0x30 - Sleep Control Register"]
-    pub sleepcr: SLEEPCR,
+    #[inline(always)]
+    pub const fn sleepcr(&self) -> &SLEEPCR {
+        &self.sleepcr
+    }
     #[doc = "0x34 - Deep Sleep Control Register"]
-    pub dsleepcr: DSLEEPCR,
+    #[inline(always)]
+    pub const fn dsleepcr(&self) -> &DSLEEPCR {
+        &self.dsleepcr
+    }
 }
 #[doc = "CLKSTAT (r) register accessor: Clock Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkstat::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clkstat`]
 module"]

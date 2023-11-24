@@ -5,7 +5,7 @@ pub type W = crate::W<QCTRL0_SPEC>;
 #[doc = "Field `XTSEL` reader - External Trigger Input Selection"]
 pub type XTSEL_R = crate::FieldReader;
 #[doc = "Field `XTSEL` writer - External Trigger Input Selection"]
-pub type XTSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XTSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `XTLVL` reader - External Trigger Level"]
 pub type XTLVL_R = crate::BitReader;
 #[doc = "Field `XTMODE` reader - Trigger Operating Mode"]
@@ -66,8 +66,8 @@ impl XTMODE_R {
     }
 }
 #[doc = "Field `XTMODE` writer - Trigger Operating Mode"]
-pub type XTMODE_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, XTMODE_A>;
-impl<'a, REG, const O: u8> XTMODE_W<'a, REG, O>
+pub type XTMODE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, XTMODE_A>;
+impl<'a, REG> XTMODE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -108,8 +108,8 @@ impl From<XTWC_AW> for bool {
     }
 }
 #[doc = "Field `XTWC` writer - Write Control for Trigger Configuration"]
-pub type XTWC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, XTWC_AW>;
-impl<'a, REG, const O: u8> XTWC_W<'a, REG, O>
+pub type XTWC_W<'a, REG> = crate::BitWriter<'a, REG, XTWC_AW>;
+impl<'a, REG> XTWC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -127,7 +127,7 @@ where
 #[doc = "Field `GTSEL` reader - Gate Input Selection"]
 pub type GTSEL_R = crate::FieldReader;
 #[doc = "Field `GTSEL` writer - Gate Input Selection"]
-pub type GTSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type GTSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `GTLVL` reader - Gate Input Level"]
 pub type GTLVL_R = crate::BitReader;
 #[doc = "Write Control for Gate Configuration\n\nValue on reset: 0"]
@@ -145,8 +145,8 @@ impl From<GTWC_AW> for bool {
     }
 }
 #[doc = "Field `GTWC` writer - Write Control for Gate Configuration"]
-pub type GTWC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, GTWC_AW>;
-impl<'a, REG, const O: u8> GTWC_W<'a, REG, O>
+pub type GTWC_W<'a, REG> = crate::BitWriter<'a, REG, GTWC_AW>;
+impl<'a, REG> GTWC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl TMEN_R {
     }
 }
 #[doc = "Field `TMEN` writer - Timer Mode Enable"]
-pub type TMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMEN_A>;
-impl<'a, REG, const O: u8> TMEN_W<'a, REG, O>
+pub type TMEN_W<'a, REG> = crate::BitWriter<'a, REG, TMEN_A>;
+impl<'a, REG> TMEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -229,8 +229,8 @@ impl From<TMWC_AW> for bool {
     }
 }
 #[doc = "Field `TMWC` writer - Write Control for Timer Mode"]
-pub type TMWC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMWC_AW>;
-impl<'a, REG, const O: u8> TMWC_W<'a, REG, O>
+pub type TMWC_W<'a, REG> = crate::BitWriter<'a, REG, TMWC_AW>;
+impl<'a, REG> TMWC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -281,44 +281,44 @@ impl W {
     #[doc = "Bits 8:11 - External Trigger Input Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn xtsel(&mut self) -> XTSEL_W<QCTRL0_SPEC, 8> {
-        XTSEL_W::new(self)
+    pub fn xtsel(&mut self) -> XTSEL_W<QCTRL0_SPEC> {
+        XTSEL_W::new(self, 8)
     }
     #[doc = "Bits 13:14 - Trigger Operating Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn xtmode(&mut self) -> XTMODE_W<QCTRL0_SPEC, 13> {
-        XTMODE_W::new(self)
+    pub fn xtmode(&mut self) -> XTMODE_W<QCTRL0_SPEC> {
+        XTMODE_W::new(self, 13)
     }
     #[doc = "Bit 15 - Write Control for Trigger Configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn xtwc(&mut self) -> XTWC_W<QCTRL0_SPEC, 15> {
-        XTWC_W::new(self)
+    pub fn xtwc(&mut self) -> XTWC_W<QCTRL0_SPEC> {
+        XTWC_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Gate Input Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn gtsel(&mut self) -> GTSEL_W<QCTRL0_SPEC, 16> {
-        GTSEL_W::new(self)
+    pub fn gtsel(&mut self) -> GTSEL_W<QCTRL0_SPEC> {
+        GTSEL_W::new(self, 16)
     }
     #[doc = "Bit 23 - Write Control for Gate Configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn gtwc(&mut self) -> GTWC_W<QCTRL0_SPEC, 23> {
-        GTWC_W::new(self)
+    pub fn gtwc(&mut self) -> GTWC_W<QCTRL0_SPEC> {
+        GTWC_W::new(self, 23)
     }
     #[doc = "Bit 28 - Timer Mode Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmen(&mut self) -> TMEN_W<QCTRL0_SPEC, 28> {
-        TMEN_W::new(self)
+    pub fn tmen(&mut self) -> TMEN_W<QCTRL0_SPEC> {
+        TMEN_W::new(self, 28)
     }
     #[doc = "Bit 31 - Write Control for Timer Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmwc(&mut self) -> TMWC_W<QCTRL0_SPEC, 31> {
-        TMWC_W::new(self)
+    pub fn tmwc(&mut self) -> TMWC_W<QCTRL0_SPEC> {
+        TMWC_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
