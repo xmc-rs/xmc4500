@@ -39,8 +39,8 @@ impl IBYP_R {
     }
 }
 #[doc = "Field `IBYP` writer - Instruction Prefetch Buffer Bypass"]
-pub type IBYP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, IBYP_A>;
-impl<'a, REG, const O: u8> IBYP_W<'a, REG, O>
+pub type IBYP_W<'a, REG> = crate::BitWriter<'a, REG, IBYP_A>;
+impl<'a, REG> IBYP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -70,8 +70,8 @@ impl From<IINV_AW> for bool {
     }
 }
 #[doc = "Field `IINV` writer - Instruction Prefetch Buffer Invalidate"]
-pub type IINV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, IINV_AW>;
-impl<'a, REG, const O: u8> IINV_W<'a, REG, O>
+pub type IINV_W<'a, REG> = crate::BitWriter<'a, REG, IINV_AW>;
+impl<'a, REG> IINV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -97,14 +97,14 @@ impl W {
     #[doc = "Bit 0 - Instruction Prefetch Buffer Bypass"]
     #[inline(always)]
     #[must_use]
-    pub fn ibyp(&mut self) -> IBYP_W<PCON_SPEC, 0> {
-        IBYP_W::new(self)
+    pub fn ibyp(&mut self) -> IBYP_W<PCON_SPEC> {
+        IBYP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Instruction Prefetch Buffer Invalidate"]
     #[inline(always)]
     #[must_use]
-    pub fn iinv(&mut self) -> IINV_W<PCON_SPEC, 1> {
-        IINV_W::new(self)
+    pub fn iinv(&mut self) -> IINV_W<PCON_SPEC> {
+        IINV_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

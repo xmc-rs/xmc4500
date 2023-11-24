@@ -5,7 +5,7 @@ pub type W = crate::W<MCR_SPEC>;
 #[doc = "Field `MPSEL` reader - Message Pending Selector"]
 pub type MPSEL_R = crate::FieldReader;
 #[doc = "Field `MPSEL` writer - Message Pending Selector"]
-pub type MPSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MPSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
@@ -17,8 +17,8 @@ impl W {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
     #[must_use]
-    pub fn mpsel(&mut self) -> MPSEL_W<MCR_SPEC, 12> {
-        MPSEL_W::new(self)
+    pub fn mpsel(&mut self) -> MPSEL_W<MCR_SPEC> {
+        MPSEL_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

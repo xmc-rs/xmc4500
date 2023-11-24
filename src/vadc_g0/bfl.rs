@@ -183,8 +183,8 @@ impl BFE0_R {
     }
 }
 #[doc = "Field `BFE0` writer - Enable Bit for Boundar0 Flag y"]
-pub type BFE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFE0_A>;
-impl<'a, REG, const O: u8> BFE0_W<'a, REG, O>
+pub type BFE0_W<'a, REG> = crate::BitWriter<'a, REG, BFE0_A>;
+impl<'a, REG> BFE0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -236,8 +236,8 @@ impl BFE1_R {
     }
 }
 #[doc = "Field `BFE1` writer - Enable Bit for Boundar1 Flag y"]
-pub type BFE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFE1_A>;
-impl<'a, REG, const O: u8> BFE1_W<'a, REG, O>
+pub type BFE1_W<'a, REG> = crate::BitWriter<'a, REG, BFE1_A>;
+impl<'a, REG> BFE1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -289,8 +289,8 @@ impl BFE2_R {
     }
 }
 #[doc = "Field `BFE2` writer - Enable Bit for Boundar2 Flag y"]
-pub type BFE2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFE2_A>;
-impl<'a, REG, const O: u8> BFE2_W<'a, REG, O>
+pub type BFE2_W<'a, REG> = crate::BitWriter<'a, REG, BFE2_A>;
+impl<'a, REG> BFE2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -342,8 +342,8 @@ impl BFE3_R {
     }
 }
 #[doc = "Field `BFE3` writer - Enable Bit for Boundar3 Flag y"]
-pub type BFE3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFE3_A>;
-impl<'a, REG, const O: u8> BFE3_W<'a, REG, O>
+pub type BFE3_W<'a, REG> = crate::BitWriter<'a, REG, BFE3_A>;
+impl<'a, REG> BFE3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -404,26 +404,26 @@ impl W {
     #[doc = "Bit 16 - Enable Bit for Boundar0 Flag y"]
     #[inline(always)]
     #[must_use]
-    pub fn bfe0(&mut self) -> BFE0_W<BFL_SPEC, 16> {
-        BFE0_W::new(self)
+    pub fn bfe0(&mut self) -> BFE0_W<BFL_SPEC> {
+        BFE0_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable Bit for Boundar1 Flag y"]
     #[inline(always)]
     #[must_use]
-    pub fn bfe1(&mut self) -> BFE1_W<BFL_SPEC, 17> {
-        BFE1_W::new(self)
+    pub fn bfe1(&mut self) -> BFE1_W<BFL_SPEC> {
+        BFE1_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable Bit for Boundar2 Flag y"]
     #[inline(always)]
     #[must_use]
-    pub fn bfe2(&mut self) -> BFE2_W<BFL_SPEC, 18> {
-        BFE2_W::new(self)
+    pub fn bfe2(&mut self) -> BFE2_W<BFL_SPEC> {
+        BFE2_W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable Bit for Boundar3 Flag y"]
     #[inline(always)]
     #[must_use]
-    pub fn bfe3(&mut self) -> BFE3_W<BFL_SPEC, 19> {
-        BFE3_W::new(self)
+    pub fn bfe3(&mut self) -> BFE3_W<BFL_SPEC> {
+        BFE3_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

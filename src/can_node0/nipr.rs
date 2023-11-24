@@ -52,8 +52,8 @@ impl ALINP_R {
     }
 }
 #[doc = "Field `ALINP` writer - Alert Interrupt Node Pointer"]
-pub type ALINP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, ALINP_A>;
-impl<'a, REG, const O: u8> ALINP_W<'a, REG, O>
+pub type ALINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, ALINP_A>;
+impl<'a, REG> ALINP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -124,8 +124,8 @@ impl LECINP_R {
     }
 }
 #[doc = "Field `LECINP` writer - Last Error Code Interrupt Node Pointer"]
-pub type LECINP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, LECINP_A>;
-impl<'a, REG, const O: u8> LECINP_W<'a, REG, O>
+pub type LECINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, LECINP_A>;
+impl<'a, REG> LECINP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -196,8 +196,8 @@ impl TRINP_R {
     }
 }
 #[doc = "Field `TRINP` writer - Transfer OK Interrupt Node Pointer"]
-pub type TRINP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, TRINP_A>;
-impl<'a, REG, const O: u8> TRINP_W<'a, REG, O>
+pub type TRINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, TRINP_A>;
+impl<'a, REG> TRINP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -268,8 +268,8 @@ impl CFCINP_R {
     }
 }
 #[doc = "Field `CFCINP` writer - Frame Counter Interrupt Node Pointer"]
-pub type CFCINP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, CFCINP_A>;
-impl<'a, REG, const O: u8> CFCINP_W<'a, REG, O>
+pub type CFCINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, CFCINP_A>;
+impl<'a, REG> CFCINP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -316,26 +316,26 @@ impl W {
     #[doc = "Bits 0:2 - Alert Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn alinp(&mut self) -> ALINP_W<NIPR_SPEC, 0> {
-        ALINP_W::new(self)
+    pub fn alinp(&mut self) -> ALINP_W<NIPR_SPEC> {
+        ALINP_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Last Error Code Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn lecinp(&mut self) -> LECINP_W<NIPR_SPEC, 4> {
-        LECINP_W::new(self)
+    pub fn lecinp(&mut self) -> LECINP_W<NIPR_SPEC> {
+        LECINP_W::new(self, 4)
     }
     #[doc = "Bits 8:10 - Transfer OK Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn trinp(&mut self) -> TRINP_W<NIPR_SPEC, 8> {
-        TRINP_W::new(self)
+    pub fn trinp(&mut self) -> TRINP_W<NIPR_SPEC> {
+        TRINP_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - Frame Counter Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn cfcinp(&mut self) -> CFCINP_W<NIPR_SPEC, 12> {
-        CFCINP_W::new(self)
+    pub fn cfcinp(&mut self) -> CFCINP_W<NIPR_SPEC> {
+        CFCINP_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

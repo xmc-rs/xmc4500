@@ -5,7 +5,7 @@ pub type W = crate::W<PPS_CONTROL_SPEC>;
 #[doc = "Field `PPSCTRL_PPSCMD` reader - PPSCTRL0 or PPSCMD0"]
 pub type PPSCTRL_PPSCMD_R = crate::FieldReader;
 #[doc = "Field `PPSCTRL_PPSCMD` writer - PPSCTRL0 or PPSCMD0"]
-pub type PPSCTRL_PPSCMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PPSCTRL_PPSCMD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PPSEN0` reader - Flexible PPS Output Mode Enable"]
 pub type PPSEN0_R = crate::BitReader;
 #[doc = "Field `TRGTMODSEL0` reader - Target Time Register Mode for PPS0 Output"]
@@ -73,8 +73,8 @@ impl W {
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
     #[inline(always)]
     #[must_use]
-    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<PPS_CONTROL_SPEC, 0> {
-        PPSCTRL_PPSCMD_W::new(self)
+    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<PPS_CONTROL_SPEC> {
+        PPSCTRL_PPSCMD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
