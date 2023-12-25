@@ -1,6 +1,6 @@
 # xmc4500
 
-> THIS IS A WORK IN PROGRESS AND MUCH IS UNTESED
+> THIS IS A WORK IN PROGRESS AND MUCH IS UNTESTED
 
 [![crates.io](https://img.shields.io/crates/v/xmc4500.svg)](https://crates.io/crates/xmc4500)
 [![rust](https://github.com/xmc-rs/xmc4500/workflows/Rust/badge.svg)](https://github.com/xmc-rs/xmc4500/workflows/Rust/badge.svg)
