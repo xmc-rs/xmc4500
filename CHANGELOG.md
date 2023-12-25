@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.2](https://github.com/xmc-rs/xmc4500/compare/v0.8.1...v0.8.2) (2023-12-25)
+
+
+### Bug Fixes
+
+* adding default features ([4b4de8d](https://github.com/xmc-rs/xmc4500/commit/4b4de8dfe55f9cbe383dead4b3710b3e1d2e6e0b))
+
 ## [0.8.1](https://github.com/xmc-rs/xmc4500/compare/v0.8.0...v0.8.1) (2023-12-22)
 
 
