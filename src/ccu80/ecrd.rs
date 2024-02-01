@@ -190,5 +190,5 @@ impl crate::RegisterSpec for ECRD_SPEC {
 impl crate::Readable for ECRD_SPEC {}
 #[doc = "`reset()` method sets ECRD to value 0"]
 impl crate::Resettable for ECRD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
