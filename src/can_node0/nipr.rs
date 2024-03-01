@@ -1,59 +1,59 @@
 #[doc = "Register `NIPR` reader"]
-pub type R = crate::R<NIPR_SPEC>;
+pub type R = crate::R<NiprSpec>;
 #[doc = "Register `NIPR` writer"]
-pub type W = crate::W<NIPR_SPEC>;
-#[doc = "Field `ALINP` reader - Alert Interrupt Node Pointer"]
-pub type ALINP_R = crate::FieldReader<ALINP_A>;
+pub type W = crate::W<NiprSpec>;
 #[doc = "Alert Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum ALINP_A {
+pub enum Alinp {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3 = 7,
+    Value3 = 7,
 }
-impl From<ALINP_A> for u8 {
+impl From<Alinp> for u8 {
     #[inline(always)]
-    fn from(variant: ALINP_A) -> Self {
+    fn from(variant: Alinp) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for ALINP_A {
+impl crate::FieldSpec for Alinp {
     type Ux = u8;
 }
-impl ALINP_R {
+#[doc = "Field `ALINP` reader - Alert Interrupt Node Pointer"]
+pub type AlinpR = crate::FieldReader<Alinp>;
+impl AlinpR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<ALINP_A> {
+    pub const fn variant(&self) -> Option<Alinp> {
         match self.bits {
-            0 => Some(ALINP_A::VALUE1),
-            1 => Some(ALINP_A::VALUE2),
-            7 => Some(ALINP_A::VALUE3),
+            0 => Some(Alinp::Value1),
+            1 => Some(Alinp::Value2),
+            7 => Some(Alinp::Value3),
             _ => None,
         }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == ALINP_A::VALUE1
+        *self == Alinp::Value1
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == ALINP_A::VALUE2
+        *self == Alinp::Value2
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == ALINP_A::VALUE3
+        *self == Alinp::Value3
     }
 }
 #[doc = "Field `ALINP` writer - Alert Interrupt Node Pointer"]
-pub type ALINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, ALINP_A>;
-impl<'a, REG> ALINP_W<'a, REG>
+pub type AlinpW<'a, REG> = crate::FieldWriter<'a, REG, 3, Alinp>;
+impl<'a, REG> AlinpW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -61,71 +61,71 @@ where
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(ALINP_A::VALUE1)
+        self.variant(Alinp::Value1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(ALINP_A::VALUE2)
+        self.variant(Alinp::Value2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(ALINP_A::VALUE3)
+        self.variant(Alinp::Value3)
     }
 }
-#[doc = "Field `LECINP` reader - Last Error Code Interrupt Node Pointer"]
-pub type LECINP_R = crate::FieldReader<LECINP_A>;
 #[doc = "Last Error Code Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum LECINP_A {
+pub enum Lecinp {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3 = 7,
+    Value3 = 7,
 }
-impl From<LECINP_A> for u8 {
+impl From<Lecinp> for u8 {
     #[inline(always)]
-    fn from(variant: LECINP_A) -> Self {
+    fn from(variant: Lecinp) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for LECINP_A {
+impl crate::FieldSpec for Lecinp {
     type Ux = u8;
 }
-impl LECINP_R {
+#[doc = "Field `LECINP` reader - Last Error Code Interrupt Node Pointer"]
+pub type LecinpR = crate::FieldReader<Lecinp>;
+impl LecinpR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<LECINP_A> {
+    pub const fn variant(&self) -> Option<Lecinp> {
         match self.bits {
-            0 => Some(LECINP_A::VALUE1),
-            1 => Some(LECINP_A::VALUE2),
-            7 => Some(LECINP_A::VALUE3),
+            0 => Some(Lecinp::Value1),
+            1 => Some(Lecinp::Value2),
+            7 => Some(Lecinp::Value3),
             _ => None,
         }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == LECINP_A::VALUE1
+        *self == Lecinp::Value1
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == LECINP_A::VALUE2
+        *self == Lecinp::Value2
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == LECINP_A::VALUE3
+        *self == Lecinp::Value3
     }
 }
 #[doc = "Field `LECINP` writer - Last Error Code Interrupt Node Pointer"]
-pub type LECINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, LECINP_A>;
-impl<'a, REG> LECINP_W<'a, REG>
+pub type LecinpW<'a, REG> = crate::FieldWriter<'a, REG, 3, Lecinp>;
+impl<'a, REG> LecinpW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -133,71 +133,71 @@ where
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(LECINP_A::VALUE1)
+        self.variant(Lecinp::Value1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(LECINP_A::VALUE2)
+        self.variant(Lecinp::Value2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(LECINP_A::VALUE3)
+        self.variant(Lecinp::Value3)
     }
 }
-#[doc = "Field `TRINP` reader - Transfer OK Interrupt Node Pointer"]
-pub type TRINP_R = crate::FieldReader<TRINP_A>;
 #[doc = "Transfer OK Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum TRINP_A {
+pub enum Trinp {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3 = 7,
+    Value3 = 7,
 }
-impl From<TRINP_A> for u8 {
+impl From<Trinp> for u8 {
     #[inline(always)]
-    fn from(variant: TRINP_A) -> Self {
+    fn from(variant: Trinp) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for TRINP_A {
+impl crate::FieldSpec for Trinp {
     type Ux = u8;
 }
-impl TRINP_R {
+#[doc = "Field `TRINP` reader - Transfer OK Interrupt Node Pointer"]
+pub type TrinpR = crate::FieldReader<Trinp>;
+impl TrinpR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<TRINP_A> {
+    pub const fn variant(&self) -> Option<Trinp> {
         match self.bits {
-            0 => Some(TRINP_A::VALUE1),
-            1 => Some(TRINP_A::VALUE2),
-            7 => Some(TRINP_A::VALUE3),
+            0 => Some(Trinp::Value1),
+            1 => Some(Trinp::Value2),
+            7 => Some(Trinp::Value3),
             _ => None,
         }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == TRINP_A::VALUE1
+        *self == Trinp::Value1
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == TRINP_A::VALUE2
+        *self == Trinp::Value2
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == TRINP_A::VALUE3
+        *self == Trinp::Value3
     }
 }
 #[doc = "Field `TRINP` writer - Transfer OK Interrupt Node Pointer"]
-pub type TRINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, TRINP_A>;
-impl<'a, REG> TRINP_W<'a, REG>
+pub type TrinpW<'a, REG> = crate::FieldWriter<'a, REG, 3, Trinp>;
+impl<'a, REG> TrinpW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -205,71 +205,71 @@ where
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(TRINP_A::VALUE1)
+        self.variant(Trinp::Value1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(TRINP_A::VALUE2)
+        self.variant(Trinp::Value2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(TRINP_A::VALUE3)
+        self.variant(Trinp::Value3)
     }
 }
-#[doc = "Field `CFCINP` reader - Frame Counter Interrupt Node Pointer"]
-pub type CFCINP_R = crate::FieldReader<CFCINP_A>;
 #[doc = "Frame Counter Interrupt Node Pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum CFCINP_A {
+pub enum Cfcinp {
     #[doc = "0: Interrupt output line INT_O0 is selected."]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Interrupt output line INT_O1 is selected."]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "7: Interrupt output line INT_O7 is selected."]
-    VALUE3 = 7,
+    Value3 = 7,
 }
-impl From<CFCINP_A> for u8 {
+impl From<Cfcinp> for u8 {
     #[inline(always)]
-    fn from(variant: CFCINP_A) -> Self {
+    fn from(variant: Cfcinp) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for CFCINP_A {
+impl crate::FieldSpec for Cfcinp {
     type Ux = u8;
 }
-impl CFCINP_R {
+#[doc = "Field `CFCINP` reader - Frame Counter Interrupt Node Pointer"]
+pub type CfcinpR = crate::FieldReader<Cfcinp>;
+impl CfcinpR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<CFCINP_A> {
+    pub const fn variant(&self) -> Option<Cfcinp> {
         match self.bits {
-            0 => Some(CFCINP_A::VALUE1),
-            1 => Some(CFCINP_A::VALUE2),
-            7 => Some(CFCINP_A::VALUE3),
+            0 => Some(Cfcinp::Value1),
+            1 => Some(Cfcinp::Value2),
+            7 => Some(Cfcinp::Value3),
             _ => None,
         }
     }
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == CFCINP_A::VALUE1
+        *self == Cfcinp::Value1
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == CFCINP_A::VALUE2
+        *self == Cfcinp::Value2
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == CFCINP_A::VALUE3
+        *self == Cfcinp::Value3
     }
 }
 #[doc = "Field `CFCINP` writer - Frame Counter Interrupt Node Pointer"]
-pub type CFCINP_W<'a, REG> = crate::FieldWriter<'a, REG, 3, CFCINP_A>;
-impl<'a, REG> CFCINP_W<'a, REG>
+pub type CfcinpW<'a, REG> = crate::FieldWriter<'a, REG, 3, Cfcinp>;
+impl<'a, REG> CfcinpW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -277,90 +277,81 @@ where
     #[doc = "Interrupt output line INT_O0 is selected."]
     #[inline(always)]
     pub fn value1(self) -> &'a mut crate::W<REG> {
-        self.variant(CFCINP_A::VALUE1)
+        self.variant(Cfcinp::Value1)
     }
     #[doc = "Interrupt output line INT_O1 is selected."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
-        self.variant(CFCINP_A::VALUE2)
+        self.variant(Cfcinp::Value2)
     }
     #[doc = "Interrupt output line INT_O7 is selected."]
     #[inline(always)]
     pub fn value3(self) -> &'a mut crate::W<REG> {
-        self.variant(CFCINP_A::VALUE3)
+        self.variant(Cfcinp::Value3)
     }
 }
 impl R {
     #[doc = "Bits 0:2 - Alert Interrupt Node Pointer"]
     #[inline(always)]
-    pub fn alinp(&self) -> ALINP_R {
-        ALINP_R::new((self.bits & 7) as u8)
+    pub fn alinp(&self) -> AlinpR {
+        AlinpR::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 4:6 - Last Error Code Interrupt Node Pointer"]
     #[inline(always)]
-    pub fn lecinp(&self) -> LECINP_R {
-        LECINP_R::new(((self.bits >> 4) & 7) as u8)
+    pub fn lecinp(&self) -> LecinpR {
+        LecinpR::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bits 8:10 - Transfer OK Interrupt Node Pointer"]
     #[inline(always)]
-    pub fn trinp(&self) -> TRINP_R {
-        TRINP_R::new(((self.bits >> 8) & 7) as u8)
+    pub fn trinp(&self) -> TrinpR {
+        TrinpR::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 12:14 - Frame Counter Interrupt Node Pointer"]
     #[inline(always)]
-    pub fn cfcinp(&self) -> CFCINP_R {
-        CFCINP_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn cfcinp(&self) -> CfcinpR {
+        CfcinpR::new(((self.bits >> 12) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Alert Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn alinp(&mut self) -> ALINP_W<NIPR_SPEC> {
-        ALINP_W::new(self, 0)
+    pub fn alinp(&mut self) -> AlinpW<NiprSpec> {
+        AlinpW::new(self, 0)
     }
     #[doc = "Bits 4:6 - Last Error Code Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn lecinp(&mut self) -> LECINP_W<NIPR_SPEC> {
-        LECINP_W::new(self, 4)
+    pub fn lecinp(&mut self) -> LecinpW<NiprSpec> {
+        LecinpW::new(self, 4)
     }
     #[doc = "Bits 8:10 - Transfer OK Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn trinp(&mut self) -> TRINP_W<NIPR_SPEC> {
-        TRINP_W::new(self, 8)
+    pub fn trinp(&mut self) -> TrinpW<NiprSpec> {
+        TrinpW::new(self, 8)
     }
     #[doc = "Bits 12:14 - Frame Counter Interrupt Node Pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn cfcinp(&mut self) -> CFCINP_W<NIPR_SPEC> {
-        CFCINP_W::new(self, 12)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn cfcinp(&mut self) -> CfcinpW<NiprSpec> {
+        CfcinpW::new(self, 12)
     }
 }
 #[doc = "Node Interrupt Pointer Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`nipr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nipr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct NIPR_SPEC;
-impl crate::RegisterSpec for NIPR_SPEC {
+pub struct NiprSpec;
+impl crate::RegisterSpec for NiprSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`nipr::R`](R) reader structure"]
-impl crate::Readable for NIPR_SPEC {}
+impl crate::Readable for NiprSpec {}
 #[doc = "`write(|w| ..)` method takes [`nipr::W`](W) writer structure"]
-impl crate::Writable for NIPR_SPEC {
+impl crate::Writable for NiprSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets NIPR to value 0"]
-impl crate::Resettable for NIPR_SPEC {
+impl crate::Resettable for NiprSpec {
     const RESET_VALUE: u32 = 0;
 }
