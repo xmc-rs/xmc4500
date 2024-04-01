@@ -30,6 +30,7 @@ impl From<Xtmode> for u8 {
 impl crate::FieldSpec for Xtmode {
     type Ux = u8;
 }
+impl crate::IsEnum for Xtmode {}
 #[doc = "Field `XTMODE` reader - Trigger Operating Mode"]
 pub type XtmodeR = crate::FieldReader<Xtmode>;
 impl XtmodeR {
@@ -66,7 +67,7 @@ impl XtmodeR {
     }
 }
 #[doc = "Field `XTMODE` writer - Trigger Operating Mode"]
-pub type XtmodeW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Xtmode>;
+pub type XtmodeW<'a, REG> = crate::FieldWriter<'a, REG, 2, Xtmode, crate::Safe>;
 impl<'a, REG> XtmodeW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
