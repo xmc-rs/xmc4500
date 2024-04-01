@@ -81,6 +81,7 @@ impl From<Pri> for u8 {
 impl crate::FieldSpec for Pri {
     type Ux = u8;
 }
+impl crate::IsEnum for Pri {}
 #[doc = "Field `PRI` reader - Priority Class"]
 pub type PriR = crate::FieldReader<Pri>;
 impl PriR {
@@ -117,7 +118,7 @@ impl PriR {
     }
 }
 #[doc = "Field `PRI` writer - Priority Class"]
-pub type PriW<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, Pri>;
+pub type PriW<'a, REG> = crate::FieldWriter<'a, REG, 2, Pri, crate::Safe>;
 impl<'a, REG> PriW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

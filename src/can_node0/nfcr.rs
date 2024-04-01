@@ -22,6 +22,7 @@ impl From<Cfsel> for u8 {
 impl crate::FieldSpec for Cfsel {
     type Ux = u8;
 }
+impl crate::IsEnum for Cfsel {}
 #[doc = "Field `CFSEL` reader - CAN Frame Count Selection"]
 pub type CfselR = crate::FieldReader<Cfsel>;
 impl CfselR {
@@ -72,6 +73,7 @@ impl From<Cfmod> for u8 {
 impl crate::FieldSpec for Cfmod {
     type Ux = u8;
 }
+impl crate::IsEnum for Cfmod {}
 #[doc = "Field `CFMOD` reader - CAN Frame Counter Mode"]
 pub type CfmodR = crate::FieldReader<Cfmod>;
 impl CfmodR {
