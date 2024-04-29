@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/xmc-rs/xmc4500/compare/v0.11.0...v0.11.1) (2024-04-29)
+
+
+### Bug Fixes
+
+* regenerating files with legacy format ([82a1ffc](https://github.com/xmc-rs/xmc4500/commit/82a1ffc7e25f5fb43dfc06fc9d426745cb68724f))
+
 ## [0.11.0](https://github.com/xmc-rs/xmc4500/compare/v0.10.0...v0.11.0) (2024-04-25)
 
 
