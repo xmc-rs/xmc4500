@@ -1,196 +1,196 @@
 #[doc = "Register `ECRD` reader"]
-pub type R = crate::R<ECRD_SPEC>;
+pub type R = crate::R<EcrdSpec>;
 #[doc = "Field `CAPV` reader - Timer Capture Value"]
-pub type CAPV_R = crate::FieldReader<u16>;
+pub type CapvR = crate::FieldReader<u16>;
 #[doc = "Field `FPCV` reader - Prescaler Capture value"]
-pub type FPCV_R = crate::FieldReader;
+pub type FpcvR = crate::FieldReader;
 #[doc = "Slice pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum SPTR_A {
+pub enum Sptr {
     #[doc = "0: CC80"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: CC81"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: CC82"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: CC83"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<SPTR_A> for u8 {
+impl From<Sptr> for u8 {
     #[inline(always)]
-    fn from(variant: SPTR_A) -> Self {
+    fn from(variant: Sptr) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for SPTR_A {
+impl crate::FieldSpec for Sptr {
     type Ux = u8;
 }
-impl crate::IsEnum for SPTR_A {}
+impl crate::IsEnum for Sptr {}
 #[doc = "Field `SPTR` reader - Slice pointer"]
-pub type SPTR_R = crate::FieldReader<SPTR_A>;
-impl SPTR_R {
+pub type SptrR = crate::FieldReader<Sptr>;
+impl SptrR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SPTR_A {
+    pub const fn variant(&self) -> Sptr {
         match self.bits {
-            0 => SPTR_A::VALUE1,
-            1 => SPTR_A::VALUE2,
-            2 => SPTR_A::VALUE3,
-            3 => SPTR_A::VALUE4,
+            0 => Sptr::Value1,
+            1 => Sptr::Value2,
+            2 => Sptr::Value3,
+            3 => Sptr::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "CC80"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == SPTR_A::VALUE1
+        *self == Sptr::Value1
     }
     #[doc = "CC81"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == SPTR_A::VALUE2
+        *self == Sptr::Value2
     }
     #[doc = "CC82"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == SPTR_A::VALUE3
+        *self == Sptr::Value3
     }
     #[doc = "CC83"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == SPTR_A::VALUE4
+        *self == Sptr::Value4
     }
 }
 #[doc = "Capture register pointer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum VPTR_A {
+pub enum Vptr {
     #[doc = "0: Capture register 0"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: Capture register 1"]
-    VALUE2 = 1,
+    Value2 = 1,
     #[doc = "2: Capture register 2"]
-    VALUE3 = 2,
+    Value3 = 2,
     #[doc = "3: Capture register 3"]
-    VALUE4 = 3,
+    Value4 = 3,
 }
-impl From<VPTR_A> for u8 {
+impl From<Vptr> for u8 {
     #[inline(always)]
-    fn from(variant: VPTR_A) -> Self {
+    fn from(variant: Vptr) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for VPTR_A {
+impl crate::FieldSpec for Vptr {
     type Ux = u8;
 }
-impl crate::IsEnum for VPTR_A {}
+impl crate::IsEnum for Vptr {}
 #[doc = "Field `VPTR` reader - Capture register pointer"]
-pub type VPTR_R = crate::FieldReader<VPTR_A>;
-impl VPTR_R {
+pub type VptrR = crate::FieldReader<Vptr>;
+impl VptrR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VPTR_A {
+    pub const fn variant(&self) -> Vptr {
         match self.bits {
-            0 => VPTR_A::VALUE1,
-            1 => VPTR_A::VALUE2,
-            2 => VPTR_A::VALUE3,
-            3 => VPTR_A::VALUE4,
+            0 => Vptr::Value1,
+            1 => Vptr::Value2,
+            2 => Vptr::Value3,
+            3 => Vptr::Value4,
             _ => unreachable!(),
         }
     }
     #[doc = "Capture register 0"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == VPTR_A::VALUE1
+        *self == Vptr::Value1
     }
     #[doc = "Capture register 1"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == VPTR_A::VALUE2
+        *self == Vptr::Value2
     }
     #[doc = "Capture register 2"]
     #[inline(always)]
     pub fn is_value3(&self) -> bool {
-        *self == VPTR_A::VALUE3
+        *self == Vptr::Value3
     }
     #[doc = "Capture register 3"]
     #[inline(always)]
     pub fn is_value4(&self) -> bool {
-        *self == VPTR_A::VALUE4
+        *self == Vptr::Value4
     }
 }
 #[doc = "Full Flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FFL_A {
+pub enum Ffl {
     #[doc = "0: No new value was captured into this register"]
-    VALUE1 = 0,
+    Value1 = 0,
     #[doc = "1: A new value has been captured into this register"]
-    VALUE2 = 1,
+    Value2 = 1,
 }
-impl From<FFL_A> for bool {
+impl From<Ffl> for bool {
     #[inline(always)]
-    fn from(variant: FFL_A) -> Self {
+    fn from(variant: Ffl) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FFL` reader - Full Flag"]
-pub type FFL_R = crate::BitReader<FFL_A>;
-impl FFL_R {
+pub type FflR = crate::BitReader<Ffl>;
+impl FflR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FFL_A {
+    pub const fn variant(&self) -> Ffl {
         match self.bits {
-            false => FFL_A::VALUE1,
-            true => FFL_A::VALUE2,
+            false => Ffl::Value1,
+            true => Ffl::Value2,
         }
     }
     #[doc = "No new value was captured into this register"]
     #[inline(always)]
     pub fn is_value1(&self) -> bool {
-        *self == FFL_A::VALUE1
+        *self == Ffl::Value1
     }
     #[doc = "A new value has been captured into this register"]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
-        *self == FFL_A::VALUE2
+        *self == Ffl::Value2
     }
 }
 impl R {
     #[doc = "Bits 0:15 - Timer Capture Value"]
     #[inline(always)]
-    pub fn capv(&self) -> CAPV_R {
-        CAPV_R::new((self.bits & 0xffff) as u16)
+    pub fn capv(&self) -> CapvR {
+        CapvR::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:19 - Prescaler Capture value"]
     #[inline(always)]
-    pub fn fpcv(&self) -> FPCV_R {
-        FPCV_R::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn fpcv(&self) -> FpcvR {
+        FpcvR::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:21 - Slice pointer"]
     #[inline(always)]
-    pub fn sptr(&self) -> SPTR_R {
-        SPTR_R::new(((self.bits >> 20) & 3) as u8)
+    pub fn sptr(&self) -> SptrR {
+        SptrR::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Capture register pointer"]
     #[inline(always)]
-    pub fn vptr(&self) -> VPTR_R {
-        VPTR_R::new(((self.bits >> 22) & 3) as u8)
+    pub fn vptr(&self) -> VptrR {
+        VptrR::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - Full Flag"]
     #[inline(always)]
-    pub fn ffl(&self) -> FFL_R {
-        FFL_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn ffl(&self) -> FflR {
+        FflR::new(((self.bits >> 24) & 1) != 0)
     }
 }
 #[doc = "Extended Capture Mode Read\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ecrd::R`](R). WARN: One or more dependent resources other than the current register are immediately affected by a read operation. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct ECRD_SPEC;
-impl crate::RegisterSpec for ECRD_SPEC {
+pub struct EcrdSpec;
+impl crate::RegisterSpec for EcrdSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`ecrd::R`](R) reader structure"]
-impl crate::Readable for ECRD_SPEC {}
+impl crate::Readable for EcrdSpec {}
 #[doc = "`reset()` method sets ECRD to value 0"]
-impl crate::Resettable for ECRD_SPEC {
+impl crate::Resettable for EcrdSpec {
     const RESET_VALUE: u32 = 0;
 }
