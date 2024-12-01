@@ -96,13 +96,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Instruction Prefetch Buffer Bypass"]
     #[inline(always)]
-    #[must_use]
     pub fn ibyp(&mut self) -> IBYP_W<PCON_SPEC> {
         IBYP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Instruction Prefetch Buffer Invalidate"]
     #[inline(always)]
-    #[must_use]
     pub fn iinv(&mut self) -> IINV_W<PCON_SPEC> {
         IINV_W::new(self, 1)
     }

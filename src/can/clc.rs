@@ -34,19 +34,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Module Disable Request Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn disr(&mut self) -> DISR_W<CLC_SPEC> {
         DISR_W::new(self, 0)
     }
     #[doc = "Bit 3 - Sleep Mode Enable Control"]
     #[inline(always)]
-    #[must_use]
     pub fn edis(&mut self) -> EDIS_W<CLC_SPEC> {
         EDIS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Module Suspend Bit Write Enable for OCDS"]
     #[inline(always)]
-    #[must_use]
     pub fn sbwe(&mut self) -> SBWE_W<CLC_SPEC> {
         SBWE_W::new(self, 4)
     }

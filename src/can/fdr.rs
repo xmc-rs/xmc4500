@@ -82,37 +82,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Step Value"]
     #[inline(always)]
-    #[must_use]
     pub fn step(&mut self) -> STEP_W<FDR_SPEC> {
         STEP_W::new(self, 0)
     }
     #[doc = "Bit 11 - Suspend Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn sm(&mut self) -> SM_W<FDR_SPEC> {
         SM_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Suspend Control"]
     #[inline(always)]
-    #[must_use]
     pub fn sc(&mut self) -> SC_W<FDR_SPEC> {
         SC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Divider Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn dm(&mut self) -> DM_W<FDR_SPEC> {
         DM_W::new(self, 14)
     }
     #[doc = "Bit 30 - Enable Hardware Clock Control"]
     #[inline(always)]
-    #[must_use]
     pub fn enhw(&mut self) -> ENHW_W<FDR_SPEC> {
         ENHW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Disable Clock"]
     #[inline(always)]
-    #[must_use]
     pub fn disclk(&mut self) -> DISCLK_W<FDR_SPEC> {
         DISCLK_W::new(self, 31)
     }

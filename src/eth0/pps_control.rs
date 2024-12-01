@@ -72,7 +72,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
     #[inline(always)]
-    #[must_use]
     pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<PPS_CONTROL_SPEC> {
         PPSCTRL_PPSCMD_W::new(self, 0)
     }

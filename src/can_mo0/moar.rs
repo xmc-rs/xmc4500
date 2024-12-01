@@ -65,7 +65,7 @@ where
 pub enum PRI_A {
     #[doc = "0: Applicable only if TTCAN is available."]
     VALUE1 = 0,
-    #[doc = "1: Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL &amp; TXEN0 &amp; TXEN1 = 1) somewhere before this object in the list."]
+    #[doc = "1: Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL & TXEN0 & TXEN1 = 1) somewhere before this object in the list."]
     VALUE2 = 1,
     #[doc = "2: Transmit acceptance filtering is based on the CAN identifier. This means, message object n is considered for transmission only if there is no other message object with higher priority identifier + IDE + DIR (with respect to CAN arbitration rules) somewhere in the list (see )."]
     VALUE3 = 2,
@@ -101,7 +101,7 @@ impl PRI_R {
     pub fn is_value1(&self) -> bool {
         *self == PRI_A::VALUE1
     }
-    #[doc = "Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL &amp; TXEN0 &amp; TXEN1 = 1) somewhere before this object in the list."]
+    #[doc = "Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL & TXEN0 & TXEN1 = 1) somewhere before this object in the list."]
     #[inline(always)]
     pub fn is_value2(&self) -> bool {
         *self == PRI_A::VALUE2
@@ -129,7 +129,7 @@ where
     pub fn value1(self) -> &'a mut crate::W<REG> {
         self.variant(PRI_A::VALUE1)
     }
-    #[doc = "Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL &amp; TXEN0 &amp; TXEN1 = 1) somewhere before this object in the list."]
+    #[doc = "Transmit acceptance filtering is based on the list order. This means that message object n is considered for transmission only if there is no other message object with valid transmit request (MSGVAL & TXEN0 & TXEN1 = 1) somewhere before this object in the list."]
     #[inline(always)]
     pub fn value2(self) -> &'a mut crate::W<REG> {
         self.variant(PRI_A::VALUE2)
@@ -165,19 +165,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:28 - CAN Identifier of Message Object n"]
     #[inline(always)]
-    #[must_use]
     pub fn id(&mut self) -> ID_W<MOAR_SPEC> {
         ID_W::new(self, 0)
     }
     #[doc = "Bit 29 - Identifier Extension Bit of Message Object n"]
     #[inline(always)]
-    #[must_use]
     pub fn ide(&mut self) -> IDE_W<MOAR_SPEC> {
         IDE_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Priority Class"]
     #[inline(always)]
-    #[must_use]
     pub fn pri(&mut self) -> PRI_W<MOAR_SPEC> {
         PRI_W::new(self, 30)
     }
