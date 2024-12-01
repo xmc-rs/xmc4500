@@ -819,85 +819,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Result Event"]
     #[inline(always)]
-    #[must_use]
     pub fn resev0(&mut self) -> RESEV0_W<EVFLAG_SPEC> {
         RESEV0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Result Event"]
     #[inline(always)]
-    #[must_use]
     pub fn resev1(&mut self) -> RESEV1_W<EVFLAG_SPEC> {
         RESEV1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Result Event"]
     #[inline(always)]
-    #[must_use]
     pub fn resev2(&mut self) -> RESEV2_W<EVFLAG_SPEC> {
         RESEV2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Result Event"]
     #[inline(always)]
-    #[must_use]
     pub fn resev3(&mut self) -> RESEV3_W<EVFLAG_SPEC> {
         RESEV3_W::new(self, 3)
     }
     #[doc = "Bit 16 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev0(&mut self) -> ALEV0_W<EVFLAG_SPEC> {
         ALEV0_W::new(self, 16)
     }
     #[doc = "Bit 17 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev1(&mut self) -> ALEV1_W<EVFLAG_SPEC> {
         ALEV1_W::new(self, 17)
     }
     #[doc = "Bit 18 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev2(&mut self) -> ALEV2_W<EVFLAG_SPEC> {
         ALEV2_W::new(self, 18)
     }
     #[doc = "Bit 19 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev3(&mut self) -> ALEV3_W<EVFLAG_SPEC> {
         ALEV3_W::new(self, 19)
     }
     #[doc = "Bit 20 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev4(&mut self) -> ALEV4_W<EVFLAG_SPEC> {
         ALEV4_W::new(self, 20)
     }
     #[doc = "Bit 21 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev5(&mut self) -> ALEV5_W<EVFLAG_SPEC> {
         ALEV5_W::new(self, 21)
     }
     #[doc = "Bit 22 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev6(&mut self) -> ALEV6_W<EVFLAG_SPEC> {
         ALEV6_W::new(self, 22)
     }
     #[doc = "Bit 23 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev7(&mut self) -> ALEV7_W<EVFLAG_SPEC> {
         ALEV7_W::new(self, 23)
     }
     #[doc = "Bit 24 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev8(&mut self) -> ALEV8_W<EVFLAG_SPEC> {
         ALEV8_W::new(self, 24)
     }
     #[doc = "Bit 25 - Alarm Event"]
     #[inline(always)]
-    #[must_use]
     pub fn alev9(&mut self) -> ALEV9_W<EVFLAG_SPEC> {
         ALEV9_W::new(self, 25)
     }

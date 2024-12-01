@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - SPI INT SUPPORT"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_int_support(&mut self) -> SPI_INT_SUPPORT_W<SPI_SPEC> {
         SPI_INT_SUPPORT_W::new(self, 0)
     }

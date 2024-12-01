@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
-    #[must_use]
     pub fn mpsel(&mut self) -> MPSEL_W<MCR_SPEC> {
         MPSEL_W::new(self, 12)
     }
