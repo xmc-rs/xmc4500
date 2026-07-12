@@ -72,7 +72,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - PPSCTRL0 or PPSCMD0"]
     #[inline(always)]
-    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<PPS_CONTROL_SPEC> {
+    pub fn ppsctrl_ppscmd(&mut self) -> PPSCTRL_PPSCMD_W<'_, PPS_CONTROL_SPEC> {
         PPSCTRL_PPSCMD_W::new(self, 0)
     }
 }
@@ -86,10 +86,6 @@ impl crate::Readable for PPS_CONTROL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pps_control::W`](W) writer structure"]
 impl crate::Writable for PPS_CONTROL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PPS_CONTROL to value 0"]
-impl crate::Resettable for PPS_CONTROL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PPS_CONTROL_SPEC {}
