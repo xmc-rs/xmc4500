@@ -96,12 +96,12 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Instruction Prefetch Buffer Bypass"]
     #[inline(always)]
-    pub fn ibyp(&mut self) -> IBYP_W<PCON_SPEC> {
+    pub fn ibyp(&mut self) -> IBYP_W<'_, PCON_SPEC> {
         IBYP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Instruction Prefetch Buffer Invalidate"]
     #[inline(always)]
-    pub fn iinv(&mut self) -> IINV_W<PCON_SPEC> {
+    pub fn iinv(&mut self) -> IINV_W<'_, PCON_SPEC> {
         IINV_W::new(self, 1)
     }
 }
@@ -115,10 +115,6 @@ impl crate::Readable for PCON_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pcon::W`](W) writer structure"]
 impl crate::Writable for PCON_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PCON to value 0"]
-impl crate::Resettable for PCON_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PCON_SPEC {}

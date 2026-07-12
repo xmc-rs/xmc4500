@@ -403,22 +403,22 @@ impl R {
 impl W {
     #[doc = "Bit 16 - Enable Bit for Boundar0 Flag y"]
     #[inline(always)]
-    pub fn bfe0(&mut self) -> BFE0_W<BFL_SPEC> {
+    pub fn bfe0(&mut self) -> BFE0_W<'_, BFL_SPEC> {
         BFE0_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable Bit for Boundar1 Flag y"]
     #[inline(always)]
-    pub fn bfe1(&mut self) -> BFE1_W<BFL_SPEC> {
+    pub fn bfe1(&mut self) -> BFE1_W<'_, BFL_SPEC> {
         BFE1_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable Bit for Boundar2 Flag y"]
     #[inline(always)]
-    pub fn bfe2(&mut self) -> BFE2_W<BFL_SPEC> {
+    pub fn bfe2(&mut self) -> BFE2_W<'_, BFL_SPEC> {
         BFE2_W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable Bit for Boundar3 Flag y"]
     #[inline(always)]
-    pub fn bfe3(&mut self) -> BFE3_W<BFL_SPEC> {
+    pub fn bfe3(&mut self) -> BFE3_W<'_, BFL_SPEC> {
         BFE3_W::new(self, 19)
     }
 }
@@ -432,10 +432,6 @@ impl crate::Readable for BFL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bfl::W`](W) writer structure"]
 impl crate::Writable for BFL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BFL to value 0"]
-impl crate::Resettable for BFL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BFL_SPEC {}
