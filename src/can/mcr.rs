@@ -16,7 +16,7 @@ impl R {
 impl W {
     #[doc = "Bits 12:15 - Message Pending Selector"]
     #[inline(always)]
-    pub fn mpsel(&mut self) -> MPSEL_W<MCR_SPEC> {
+    pub fn mpsel(&mut self) -> MPSEL_W<'_, MCR_SPEC> {
         MPSEL_W::new(self, 12)
     }
 }
@@ -30,10 +30,6 @@ impl crate::Readable for MCR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mcr::W`](W) writer structure"]
 impl crate::Writable for MCR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MCR to value 0"]
-impl crate::Resettable for MCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MCR_SPEC {}

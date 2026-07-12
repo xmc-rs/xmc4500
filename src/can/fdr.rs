@@ -82,32 +82,32 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Step Value"]
     #[inline(always)]
-    pub fn step(&mut self) -> STEP_W<FDR_SPEC> {
+    pub fn step(&mut self) -> STEP_W<'_, FDR_SPEC> {
         STEP_W::new(self, 0)
     }
     #[doc = "Bit 11 - Suspend Mode"]
     #[inline(always)]
-    pub fn sm(&mut self) -> SM_W<FDR_SPEC> {
+    pub fn sm(&mut self) -> SM_W<'_, FDR_SPEC> {
         SM_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Suspend Control"]
     #[inline(always)]
-    pub fn sc(&mut self) -> SC_W<FDR_SPEC> {
+    pub fn sc(&mut self) -> SC_W<'_, FDR_SPEC> {
         SC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Divider Mode"]
     #[inline(always)]
-    pub fn dm(&mut self) -> DM_W<FDR_SPEC> {
+    pub fn dm(&mut self) -> DM_W<'_, FDR_SPEC> {
         DM_W::new(self, 14)
     }
     #[doc = "Bit 30 - Enable Hardware Clock Control"]
     #[inline(always)]
-    pub fn enhw(&mut self) -> ENHW_W<FDR_SPEC> {
+    pub fn enhw(&mut self) -> ENHW_W<'_, FDR_SPEC> {
         ENHW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Disable Clock"]
     #[inline(always)]
-    pub fn disclk(&mut self) -> DISCLK_W<FDR_SPEC> {
+    pub fn disclk(&mut self) -> DISCLK_W<'_, FDR_SPEC> {
         DISCLK_W::new(self, 31)
     }
 }
@@ -121,10 +121,6 @@ impl crate::Readable for FDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fdr::W`](W) writer structure"]
 impl crate::Writable for FDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FDR to value 0"]
-impl crate::Resettable for FDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FDR_SPEC {}
